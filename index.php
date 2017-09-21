@@ -22,6 +22,21 @@ border: 0 none; }
 </style>
 </head>
 <body>
+    // DB connection info
+$host = "localhost\sqlexpress";
+$user = "user name";
+$pwd = "password";
+$db = "registration";
+// Connect to database.
+try {
+    $conn = new PDO
+( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
+    $conn->setAttribute
+( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(Exception $e){
+    die(var_dump($e));
+}
 <h1>Register here!</h1>
 <p>Fill in your name and 
 email address, then click <strong>Submit</strong> 
