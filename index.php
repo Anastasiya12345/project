@@ -40,11 +40,9 @@ Otvet <input type="text"
 name="otvet" id="otvet"/></br>
 <input type="submit" 
 name="submit" value="Submit" /> 
-
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 } 
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
