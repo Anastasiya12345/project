@@ -28,15 +28,15 @@ email address, then click <strong>Submit</strong>
 to register.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
-Имя <input type="text" 
+Name <input type="text" 
 name="name" id="name"/></br> 
 Email <input type="text" 
 name="email" id="email"/></br> 
-Пароль <input type="text" 
+Password <input type="text" 
 name="password" id="password"/></br>
-Вопрос <input type="text" 
+Vopros <input type="text" 
 name="vopros" id="vopros"/></br>
-Ответ <input type="text" 
+Otvet <input type="text" 
 name="otvet" id="otvet"/></br>
 <input type="submit" 
 name="submit" value="Submit" /> 
@@ -81,7 +81,10 @@ if(count($registrants) > 0) {
 echo "<h2>People who are registered:</h2>"; 
 echo "<table>"; 
 echo "<tr><th>Name</th>"; 
-echo "<th>Email</th>"; 
+echo "<th>Email</th>";
+echo "<th>Password</th>";
+echo "<th>Vopros</th>";
+echo "<th>Otvet</th>";
 echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
