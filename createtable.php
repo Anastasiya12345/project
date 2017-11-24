@@ -1,12 +1,15 @@
 <?php 
 try { 
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "hswfhmlyz08"); 
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+$conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "CREATE TABLE registration_tbl1( 
 id INT NOT NULL IDENTITY(1,1) 
 PRIMARY KEY(id), 
 name VARCHAR(30), 
 email VARCHAR(30), 
+password VARCHAR(30),
+vopros VARCHAR(50), 
+otvet VARCHAR(30), 
 date DATE)"; 
 $conn->query($sql); 
 } 
