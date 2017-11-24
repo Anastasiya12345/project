@@ -22,7 +22,7 @@ border: 0 none; }
 </style> 
 </head> 
 <body> 
-<h1>Регистрация</h1> 
+<h1>Registration</h1> 
 <p>Fill in your name and 
 email address, then click <strong>Submit</strong> 
 to register.</p> 
