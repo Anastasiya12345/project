@@ -23,7 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация</h1> 
-<p>Введите свое имя и адрес электронной почты и нажмите кнопку<strong>Зарегестрироваться</strong> 
+<p>Введите свое имя и адрес электронной почты и нажмите кнопку <strong> Зарегестрироваться </strong> 
 to register.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
