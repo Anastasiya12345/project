@@ -51,6 +51,9 @@ try {
 $name = $_POST['name']; 
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
+$password = $_POST['password'];
+$vopros = $_POST['vopros'];
+$otvet = $_POST['otvet'];
 // Insert data 
 $sql_insert = 
 "INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet) 
