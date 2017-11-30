@@ -22,7 +22,7 @@ border: 0 none; }
 </style> 
 </head> 
 <body> 
-<h1>Registration</h1> 
+<h1>Регистрация</h1> 
 <p>Fill in your name and 
 email address, then click <strong>Submit</strong> 
 to register.</p> 
@@ -32,11 +32,11 @@ enctype="multipart/form-data" >
 name="name" id="name"/></br> 
 Email <input type="text" 
 name="email" id="email"/></br> 
-Password <input type="text" 
+Пароль <input type="text" 
 name="password" id="password"/></br>
-Vopros <input type="text" 
+Вопрос <input type="text" 
 name="vopros" id="vopros"/></br>
-Otvet <input type="text" 
+Ответ <input type="text" 
 name="otvet" id="otvet"/></br>
 <input type="submit" 
 name="submit" value="Submit" /> 
