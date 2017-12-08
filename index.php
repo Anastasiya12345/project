@@ -75,6 +75,7 @@ echo "<h3>Your're registered!</h3>";
 $sql_select = "SELECT * FROM registration_tbl1"; 
 $stmt = $conn->query($sql_select); 
 $registrants = $stmt->fetchAll(); 
+<h1>Вход</h1>
 if(count($registrants) > 0) { 
 echo "<h2>Зарегестрированные</h2>"; 
 echo "<table>"; 
@@ -97,8 +98,6 @@ echo "</table>";
 echo "<h3>No one is currently registered.</h3>"; 
 } 
 ?> 
-<h1>Вход</h1> 
-
 </form> 
 
 </body> 
