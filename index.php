@@ -76,7 +76,7 @@ $sql_select = "SELECT * FROM registration_tbl1";
 $stmt = $conn->query($sql_select); 
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) { 
-echo "<h2>People who are registered:</h2>"; 
+echo "<h2>Зарегестрированные</h2>"; 
 echo "<table>"; 
 echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>";
@@ -93,6 +93,9 @@ echo "<td>".$registrant['otvet']."</td>";
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
 echo "</table>"; 
+  echo "<tr><td>".$registrant['id']."</td></tr>";
+  header("Lokation: 2.php");
+  exit;
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
 } 
