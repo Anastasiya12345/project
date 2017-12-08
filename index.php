@@ -99,18 +99,18 @@ echo "<h3>No one is currently registered.</h3>";
 ?> 
 <h1>Вход</h1>
 Email <input type="text" 
-name="email2" id="email"/></br> 
+name="email2" id="email2"/></br> 
 Пароль <input type="text" 
-name="password2" id="password"/></br>
+name="password2" id="password2"/></br>
 <input type="submit" 
-name="submit2" value="Войти" />
+name="submit2" value="Войти" />;
 $password = $_POST['password'];
 $confirmpassword = $_POST['password2'];
     if($password == $confirmpassword)
     {
         echo "<h3>Пароль введен верно</h3>";
     }
-    else {echo "<h3>пароль введен неверно</h3>";}
+    else {echo "<h3>Пароль введен неверно</h3>";}
 </form> 
 
 </body> 
