@@ -67,7 +67,6 @@ $stmt->bindValue(5, $vopros);
 $stmt->bindValue(6, $otvet); 
   $stmt->execute(); 
 } 
-  <h1>Вход</h1>
 catch(Exception $e) { 
 die(var_dump($e)); 
 } 
@@ -98,6 +97,7 @@ echo "</table>";
 echo "<h3>No one is currently registered.</h3>"; 
 } 
 ?> 
+<h1>Вход</h1>
 </form> 
 
 </body> 
