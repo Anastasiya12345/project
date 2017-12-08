@@ -112,6 +112,7 @@ $confirmpassword = $_POST['password2'];
         echo "<h3>Пароль введен верно</h3>";
     }
     else {echo "<h3>Пароль введен неверно</h3>";}
+?> 
 </form> 
 
 </body> 
