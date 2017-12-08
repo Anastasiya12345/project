@@ -98,6 +98,11 @@ echo "<h3>No one is currently registered.</h3>";
 } 
 ?> 
 <h1>Вход</h1>
+Email <input type="text" 
+name="email2" id="email"/></br> 
+Пароль <input type="text" 
+name="password2" id="password"/></br>
+
 </form> 
 
 </body> 
