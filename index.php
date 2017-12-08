@@ -104,6 +104,7 @@ name="email2" id="email2"/></br>
 name="password2" id="password2"/></br>
 <input type="submit" 
 name="submit2" value="Войти" />
+<?php
 $password = $_POST['password'];
 $confirmpassword = $_POST['password2'];
     if($password == $confirmpassword)
