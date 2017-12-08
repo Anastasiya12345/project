@@ -102,7 +102,8 @@ Email <input type="text"
 name="email2" id="email"/></br> 
 Пароль <input type="text" 
 name="password2" id="password"/></br>
-
+<input type="submit" 
+name="submit2" value="Войти" /> 
 </form> 
 
 </body> 
