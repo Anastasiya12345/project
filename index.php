@@ -93,9 +93,6 @@ echo "<td>".$registrant['otvet']."</td>";
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
 echo "</table>"; 
-  echo "<tr><td>".$registrant['id']."</td></tr>";
-  header("Location: 2.php");
-  exit;
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
 } 
