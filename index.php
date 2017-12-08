@@ -104,13 +104,6 @@ name="email2" id="email2"/></br>
 name="password2" id="password2"/></br>
 <input type="submit" 
 name="submit2" value="Войти" />
-try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} 
-catch (PDOException $e) { 
-print("Error connecting to SQL Server."); 
-die(print_r($e)); 
-} 
 $password = $_POST['password'];
 $confirmpassword = $_POST['password2'];
     if($password == $confirmpassword)
