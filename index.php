@@ -103,7 +103,14 @@ name="email2" id="email"/></br>
 Пароль <input type="text" 
 name="password2" id="password"/></br>
 <input type="submit" 
-name="submit2" value="Войти" /> 
+name="submit2" value="Войти" />
+$password = $_POST['password'];
+$confirmpassword = $_POST['password2'];
+    if($password == $confirmpassword)
+    {
+        echo "<h3>Пароль введен верно</h3>";
+    }
+    else {echo "<h3>пароль введен неверно</h3>";}
 </form> 
 
 </body> 
