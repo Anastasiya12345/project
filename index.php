@@ -67,12 +67,12 @@ $stmt->bindValue(5, $vopros);
 $stmt->bindValue(6, $otvet); 
   $stmt->execute(); 
 } 
+  <h1>Вход</h1>
 catch(Exception $e) { 
 die(var_dump($e)); 
 } 
 echo "<h3>Your're registered!</h3>"; 
 } 
-<h1>Вход</h1>
 $sql_select = "SELECT * FROM registration_tbl1"; 
 $stmt = $conn->query($sql_select); 
 $registrants = $stmt->fetchAll(); 
