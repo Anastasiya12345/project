@@ -23,4 +23,9 @@ border: 0 none; }
 </head> 
 <body> 
 <h1> Восстановление пароля </h1> 
-<p>Введите Email, вопрос, ответ для восстановления пароля и нажмите кнопку <strong> Готово </strong>.</p> 
+<p>Введите Email и нажмите кнопку <strong> Готово </strong>.</p> 
+<form method="post" action="2.php" 
+enctype="multipart/form-data" >
+Email <input type="text" 
+name="email" id="email"/></br> 
+<?php echo <p> 'Такого Email не существует в БД' </p>  ?>
