@@ -1,6 +1,6 @@
 <html> 
 <head> 
-<Title>Registration Form</Title> 
+<Title>Восстановление пароля</Title> 
 <style type="text/css"> 
 body { background-color: 
 #fff; border-top: solid 10px #000; 
@@ -22,5 +22,5 @@ border: 0 none; }
 </style> 
 </head> 
 <body> 
-<h1>Регистрация</h1> 
-<p>Введите свое имя, адрес электронной почты, пароль, контрольный вопрос, ответ на него и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
+<h1>Восстановление пароля</h1> 
+<p>Введите Email, вопрос, ответ для восстановления пароля и нажмите кнопку <strong> Готово </strong>.</p> 
