@@ -28,6 +28,7 @@ border: 0 none; }
 enctype="multipart/form-data" >
 Email <input type="text" 
 name="email" id="email"/></br> 
-<?php echo 
-  <p> Такого Email не существует в БД </p> 
+<?php 
+  echo "<p> Такого Email не существует в БД </p>";
+  
 ?>
