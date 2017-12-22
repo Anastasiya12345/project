@@ -26,14 +26,14 @@ border: 0 none; }
 <form method="post" action="2.php" 
 enctype="multipart/form-data" >
 Email <input type="text" 
-name="email" id="email"/></br> 
+name="email" id="email2"/></br> 
 <input type = "submit" value = "Проверить" name = "sub" id = "sub">
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
 
- $email = $_POST['email'];
+ $email = $_POST['email2'];
     $sql_select = "SELECT email FROM registration_tbl where email = '$email'";
 $stmt = $conn->query($sql_select);
        if(email == '$email') {
