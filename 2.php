@@ -29,13 +29,13 @@ Email <input type="text"
 name="email" id="email"/></br> 
 <input type = "submit" value = "Проверить" name = "sub" id = "sub">
 <?php 
+ 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
- 
-$email = $_POST['email'];
+ $email = $_POST['email'];
     $sql_select = "SELECT email FROM registration_tbl email='$email'";
-//$stmt = $conn->query($sql_select);
+$stmt = $conn->query($sql_select);
        if(count($sql_select) > 0) {
         echo "111";
     }
