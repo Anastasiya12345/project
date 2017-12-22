@@ -36,7 +36,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $email = $_POST['email'];
     $sql_select = "SELECT email FROM registration_tbl";
 $stmt = $conn->query($sql_select);
-       if(email == '$email') {
+       if($sql_select == '$email') {
         echo "111";
     }
       else {echo "<h3>123</h3>";}
