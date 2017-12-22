@@ -37,7 +37,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql_select = "SELECT email FROM registration_tbl where email = '$email' ";
   //$sql_select = "Select vopros FROM registration_tbl where email = '$email' ";
 $stmt = $conn->query($sql_select);
-$registrants = $stmt->fetchAll();
+/*$registrants = $stmt->fetchAll();
        if(count($registrants) > 0) {
   echo "1";
 	      foreach($registrants as $registrant){
@@ -45,7 +45,8 @@ $registrants = $stmt->fetchAll();
 }
 }
 }  
-
+*/
+	echo $stmt;
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
