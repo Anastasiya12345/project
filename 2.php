@@ -26,26 +26,21 @@ border: 0 none; }
 <form method="post" action="2.php" 
 enctype="multipart/form-data" >
 Email <input type="text" 
-name="email" id="email2"/></br> 
+name="email" id="email"/></br> 
 <input type = "submit" value = "Проверить" name = "sub" id = "sub">
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} 
-
- $email = $_POST['email2'];
+}
+ 
+$email = $_POST['email'];
     $sql_select = "SELECT email FROM registration_tbl";
 $stmt = $conn->query($sql_select);
        if(email == '$email') {
         echo "111";
     }
       else {echo "<h3>123</h3>";}
-/*	      foreach($registrants as $registrant){
-  echo "<p> 123123 </p>";
-}
-}
-}  
-*/
+ 
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
