@@ -35,20 +35,17 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
  $email = $_POST['email'];
     $sql_select = "SELECT email FROM registration_tbl where email = '$email'";
-  //$sql_select = "Select vopros FROM registration_tbl where email = '$email' ";
 $stmt = $conn->query($sql_select);
-       if(email = '$email') {
-  echo "1";
-else 
-	echo "2"
-       }
+       if(email == '$email') {
+        echo "111";
+    }
+      else {echo "<h3>123</h3>";}
 /*	      foreach($registrants as $registrant){
   echo "<p> 123123 </p>";
 }
 }
 }  
 */
-	echo $stmt;
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
