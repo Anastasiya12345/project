@@ -34,13 +34,12 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
 
  $email = $_POST['email'];
-    $sql_select = "SELECT email FROM registration_tbl where email = '$email' ";
+    $sql_select = "SELECT email FROM registration_tbl";
   //$sql_select = "Select vopros FROM registration_tbl where email = '$email' ";
 $stmt = $conn->query($sql_select);
-/*$registrants = $stmt->fetchAll();
-       if(count($registrants) > 0) {
+       if( email = '$email') {
   echo "1";
-	      foreach($registrants as $registrant){
+/*	      foreach($registrants as $registrant){
   echo "<p> 123123 </p>";
 }
 }
