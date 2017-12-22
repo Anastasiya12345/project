@@ -44,10 +44,10 @@ $registrants = $stmt->fetchAll();
        if(count($registrants) > 0) {
   echo "1";
 	      foreach($registrants as $registrant){
-  echo "<p>  </p>";
+  echo "<p> 123123 </p>";
 }
 }
-  
+}  
   
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
