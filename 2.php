@@ -32,16 +32,12 @@ name="email" id="email"/></br>
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
- /* 
+
  $email = $_POST['email'];
     $sql_select = "SELECT email FROM registration_tbl where email = '$email' ";
   //$sql_select = "Select vopros FROM registration_tbl where email = '$email' ";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
-  
- if(!empty($_POST)) { 
-try { 
-	
        if(count($registrants) > 0) {
   echo "1";
 	      foreach($registrants as $registrant){
@@ -49,7 +45,7 @@ try {
 }
 }
 }  
-  */
+
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
