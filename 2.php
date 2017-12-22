@@ -35,6 +35,7 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 }
+  /*
 $email = $_POST['email'];
 $sql_select = "SELECT email FROM registration_tbl";
 $stmt = $conn->query($sql_select);
@@ -43,5 +44,6 @@ $registrants = $stmt->fetchAll();
   if(!empty($_POST)) { 
 try { 
   echo "<p> Такого Email не существует в БД </p>";
+  */
   
 ?>
