@@ -33,13 +33,12 @@ name="email" id="email"/></br>
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
- $email = $_POST['email'];
-    $sql_select = "SELECT email FROM registration_tbl email='$email'";
+    $sql_select = "SELECT email FROM registration_tbl WHERE email='$email'";
 $stmt = $conn->query($sql_select);
-       if(count($sql_select) > 0) {
-        echo "111";
-    }
-      else {echo "<h3>123</h3>";}
+$registrants=$stmt->fetchAll();
+ foreach($registrants as $registrant){
+  echo "<td><td>$registrant['vopros'].</td>";
+ }
  
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
