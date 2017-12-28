@@ -39,7 +39,7 @@ try {
      if(isset($_POST['go'])) {
             $email1 = $_POST['email1'];
             $vopros = $_POST['vopros'];
-            $sql_select = "SELECT vopros,email FROM registration1_tbl1 WHERE vopros like :vopros";
+            $sql_select = "SELECT vopros,email FROM registration1_tbl1 WHERE vopros like :vopros AND email = $email";
             $stmt = $conn->prepare($sql_select);    
             $stmt->execute(array(':vopros'=>$vopros.'%'));
             
