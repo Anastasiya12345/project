@@ -41,12 +41,12 @@ try {
             $sql_select = "SELECT vopros FROM registration1_tbl1 WHERE email = $email1";
             $stmt = $conn->query($sql_select);
             $stmt->execute();
-          }
-     
- $registrants=$stmt->fetchAll();
+        $registrants=$stmt->fetchAll();
  foreach($registrants as $registrant) { 
  echo $registrant["vopros"];
  }
+          }
+     
 }
 catch (PDOException $e) { 
   print("Error connecting to SQL Server."); 
