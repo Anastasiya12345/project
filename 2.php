@@ -45,7 +45,7 @@ try {
      
  $registrants=$stmt->fetchAll();
  foreach($registrants as $registrant) { 
- echo $registrant['vopros']; 
+ prompt('Введите вопрос'); 
  }
 }
 catch (PDOException $e) { 
