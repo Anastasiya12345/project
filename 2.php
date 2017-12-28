@@ -38,7 +38,7 @@ try {
   
      if(isset($_POST['go'])) {
             $email1 = $_POST['email1'];
-            $sql_select = "SELECT email, vopros FROM registration1_tbl WHERE email = $email1";
+            $sql_select = "SELECT email, vopros FROM registration1_tbl1 WHERE email = $email1";
             $stmt = $conn->prepare($sql_select);
             $stmt->execute();
           }
