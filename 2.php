@@ -23,7 +23,7 @@ border: 0 none; }
 <body> 
 <h1> Восстановление пароля </h1> 
 <p>Введите Email и нажмите кнопку <strong> Готово </strong>.</p> 
-<form method="post" action="2.php" 
+/* <form method="post" action="2.php" 
 enctype="multipart/form-data" >
 Email <input type="text" 
 name="email1" id="email1"/></br> 
@@ -44,5 +44,5 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 }
-  
+*/   
 ?>
