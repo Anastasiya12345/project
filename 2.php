@@ -38,10 +38,9 @@ try {
   
      if(isset($_POST['go'])) {
             $email1 = $_POST['email1'];
-            //$sql_select = "SELECT * FROM registration_tab WHERE gender like :gender";
-            $sql_select = "SELECT email, vopros FROM registration_tbl WHERE vopros like :vopros";
+            $sql_select = "SELECT email, vopros FROM registration1_tbl WHERE email = $email1";
             $stmt = $conn->prepare($sql_select);
-            $stmt->execute(array(':vopros'=>$vopros.'%'));
+            $stmt->execute();
           }
      
  $registrants=$stmt->fetchAll();
