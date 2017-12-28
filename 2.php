@@ -34,7 +34,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql_select = "SELECT email, vopros FROM registration_tbl WHERE email = $email1";
 $stmt = $conn->query($sql_select);
 $registrants=$stmt->fetchAll();
-oreach($registrants as $registrant) { 
+foreach($registrants as $registrant) { 
 echo $registrant['vopros']; 
 }
 catch (PDOException $e) { 
