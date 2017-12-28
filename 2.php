@@ -33,11 +33,11 @@ name="email1" id="email1"/></br>
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-$sql_select = "SELECT email FROM registration_tbl WHERE mail=email1";
+$sql_select = "SELECT email FROM registration_tbl WHERE email=email1";
 $stmt = $conn->query($sql_select);
 $registrants=$stmt->fetchAll();
  foreach($registrants as $registrant){
-  echo "<td><td>$registrant['vopros'].</td>";
+ echo "<td><td>$registrant['vopros'].</td>";
  }
  
 catch (PDOException $e) { 
