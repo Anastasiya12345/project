@@ -45,7 +45,10 @@ try {
      
  $registrants=$stmt->fetchAll();
  foreach($registrants as $registrant) { 
- prompt('Введите вопрос'); 
+ echo" 
+  <script type='text/javascript'> 
+      prompt('Введите код');
+  </script>";
  }
 }
 catch (PDOException $e) { 
