@@ -24,7 +24,8 @@ border: 0 none; }
 <h1> Восстановление пароля </h1> 
 <p>Введите Email и нажмите кнопку <strong> Готово </strong>.</p> 
 <form method="post" action="2.php" enctype="multipart/form-data" >
-Email <input type="text" name="email1" id="email1"/></br> 
+Email <input type="text" name="email1" id="email1"></br>
+  <input type="submit" name="go" id="go" value="Готово">
   
   <?php 
 $email1 = $_POST['email1']; 
