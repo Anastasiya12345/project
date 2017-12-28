@@ -38,13 +38,18 @@ try {
   
      if(isset($_POST['go'])) {
             $email1 = $_POST['email1'];
-            $sql_select = "SELECT vopros,email FROM registration1_tbl1 WHERE email = $email1";
-            $stmt = $conn->query($sql_select);    
-            $registrants=$stmt->fetchAll();
- foreach($registrants as $registrant) { 
- echo $registrant["vopros"];
- }
+            $vopros = $_POST['vopros'];
+            $sql_select = "SELECT vopros,email FROM registration1_tbl1 WHERE vopros like :vopros";
+            $stmt = $conn->prepare($sql_select);    
+            $stmt->execute(array(':vopros'=>$vopros.'%'));
+            
+ 
           }
+     $registrants=$stmt->fetchAll();
+  
+  foreach($registrants as $registrant) { 
+    echo $registrant["vopros"];
+  }
      
 }
 catch (PDOException $e) { 
