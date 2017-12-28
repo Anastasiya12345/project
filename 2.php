@@ -39,9 +39,8 @@ try {
      if(isset($_POST['go'])) {
             $email1 = $_POST['email1'];
             $sql_select = "SELECT vopros FROM registration1_tbl1 WHERE email = $email1";
-            $stmt = $conn->query($sql_select);
-            $stmt->execute();
-        $registrants=$stmt->fetchAll();
+            $stmt = $conn->query($sql_select);    
+            $registrants=$stmt->fetchAll();
  foreach($registrants as $registrant) { 
  echo $registrant["vopros"];
  }
