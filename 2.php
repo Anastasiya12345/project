@@ -25,4 +25,20 @@ border: 0 none; }
 <p>Введите Email и нажмите кнопку <strong> Готово </strong>.</p> 
 <form method="post" action="2.php" enctype="multipart/form-data" >
 Email <input type="text" name="email1" id="email1"/></br> 
+<?php 
+$email1 = $_POST['email1']; 
+try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+$sql_select = "SELECT email, vopros FROM registration_tbl WHERE email = '$email1'";
+$stmt = $conn->query($sql_select);
+$registrants=$stmt->fetchAll();
+foreach($registrants as $registrant) { 
+echo $registrant['vopros']; 
+}
+catch (PDOException $e) { 
+print("Error connecting to SQL Server."); 
+die(print_r($e)); 
+}   
+?>
 
