@@ -26,7 +26,7 @@ border: 0 none; }
 <form method="post" action="2.php" enctype="multipart/form-data" >
 Email <input type="text" name="email1" id="email1"/></br> 
 <?php 
-$email1 = '123'; 
+$email1 = $_POST['email1']; 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
