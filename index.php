@@ -27,16 +27,10 @@ border: 0 none; }
 enctype="multipart/form-data" > 
 Номер паспорта <input type="text" 
 name="name" id="name"/></br> 
-Email <input type="text" 
-name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
-Вопрос <input type="text" 
-name="vopros" id="vopros"/></br>
-Ответ <input type="text" 
-name="otvet" id="otvet"/></br>
 <input type="submit" 
-name="submit" value="Зарегестироваться" /> 
+name="submit" value="Войти" /> 
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
