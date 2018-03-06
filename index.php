@@ -31,7 +31,7 @@ name="name" id="name"/></br>
 name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Войти" /> 
-<?php 
+<?php /*
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
@@ -39,7 +39,7 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 } 
-/*if(!empty($_POST)) { 
+if(!empty($_POST)) { 
 try { 
 $name = $_POST['name']; 
 $email = $_POST['email']; 
@@ -63,6 +63,7 @@ $stmt->bindValue(6, $otvet);
 catch(Exception $e) { 
 die(var_dump($e));  
 }  */
+  ?>
 </form> 
 </body> 
 </html>
