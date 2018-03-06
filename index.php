@@ -25,8 +25,8 @@ border: 0 none; }
 <h1>Вход</h1> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
-Номер паспорта <input type="text" 
-name="name" id="name"/></br> 
+Номер телефона <input type="text" 
+name="nomtel" id="nomtel"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
 <input type="submit" 
