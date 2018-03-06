@@ -61,11 +61,8 @@ $stmt->bindValue(6, $otvet);
   $stmt->execute(); 
 } 
 catch(Exception $e) { 
-die(var_dump($e)); 
-} 
-echo "<h3>Your're registered!</h3>"; 
+die(var_dump($e));  
 }  
 </form> 
-
 </body> 
 </html>
