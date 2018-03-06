@@ -64,24 +64,7 @@ catch(Exception $e) {
 die(var_dump($e)); 
 } 
 echo "<h3>Your're registered!</h3>"; 
-} 
-?> 
-<h1>Вход</h1>
-Email <input type="text" 
-name="email2" id="email2"/></br> 
-Пароль <input type="text" 
-name="password2" id="password2"/></br>
-<input type="submit" 
-name="submit2" value="Войти" />
-<?php
-$password = $_POST['password'];
-$confirmpassword = $_POST['password2'];
-    if($password == $confirmpassword)
-    {
-        echo "<h3>Пароль введен верно</h3>";
-    }
-    else {echo "<h3>Пароль введен неверно</h3>";}
-?> 
+}  
 </form> 
 
 </body> 
