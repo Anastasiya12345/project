@@ -65,30 +65,6 @@ die(var_dump($e));
 } 
 echo "<h3>Your're registered!</h3>"; 
 } 
-$sql_select = "SELECT * FROM registration_tbl1"; 
-$stmt = $conn->query($sql_select); 
-$registrants = $stmt->fetchAll(); 
-if(count($registrants) > 0) { 
-echo "<h2>Зарегестрированные</h2>"; 
-echo "<table>"; 
-echo "<tr><th>Name</th>"; 
-echo "<th>Email</th>";
-echo "<th>Password</th>";
-echo "<th>vopros</th>";
-echo "<th>otvet</th>";
-echo "<th>Date</th></tr>"; 
-foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['name']."</td>"; 
-echo "<td>".$registrant['email']."</td>";
-echo "<td>".$registrant['password']."</td>";
-echo "<td>".$registrant['vopros']."</td>";
-echo "<td>".$registrant['otvet']."</td>";
-echo "<td>".$registrant['date']."</td></tr>"; 
-} 
-echo "</table>"; 
-} else { 
-echo "<h3>No one is currently registered.</h3>"; 
-} 
 ?> 
 <h1>Вход</h1>
 Email <input type="text" 
