@@ -39,7 +39,7 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 } 
-if(!empty($_POST)) { 
+/*if(!empty($_POST)) { 
 try { 
 $name = $_POST['name']; 
 $email = $_POST['email']; 
@@ -62,7 +62,7 @@ $stmt->bindValue(6, $otvet);
 } 
 catch(Exception $e) { 
 die(var_dump($e));  
-}  
+}  */
 </form> 
 </body> 
 </html>
