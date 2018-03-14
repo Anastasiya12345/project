@@ -40,8 +40,9 @@ name="nompas" id="nompas"/></br>
 Серия паспорта <input type="text" 
 name="serpas" id="serpas"/></br> 
 Номер телефона <input type="text" 
-name="nomtel" id="nomtel"/></br> 
-<p><input type="file" name="pasport"
+name="nomtel" id="nomtel"/></br>
+Загрузите отсканированную копию паспорта (2-3 и 4-5 страницы на одном листе) в формате JPEG.</br>
+<input type="file" name="pasport"
 accept="image/jpeg"></br>
 Срок страховой службы <select name="srok">
 <option value ="a1">1 год</option>
