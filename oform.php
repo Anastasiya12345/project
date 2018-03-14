@@ -36,13 +36,13 @@ name="otchestvo" id="otchestvo"/></br>
 <option value ="d2">Муж</option>
 </select></br>
 Номер паспорта <input type="text" 
-name="nomtel" id="nomtel"/></br> 
+name="nompas" id="nompas"/></br> 
 Серия паспорта <input type="text" 
-name="nomtel" id="nomtel"/></br> 
+name="serpas" id="serpas"/></br> 
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br> 
-Паспорт <input type="text" 
-name="pasport" id="pasport"/></br>
+<p><input type="file" name="pasport"
+accept="image/jpeg">
 Срок страховой службы <select name="srok">
 <option value ="a1">1 год</option>
 <option value ="a2">5 лет</option>
