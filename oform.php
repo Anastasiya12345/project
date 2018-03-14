@@ -41,14 +41,14 @@ name="nomtel" id="nomtel"/></br>
 name="pasport" id="pasport"/></br>
 Срок страховой службы <select name="srok">
 name="pasport" id="pasport"/></br>
-option value ="a1">1 год</option>
-option value ="a2">5 лет</option>
-option value ="a3">10 лет</option>
+<option value ="a1">1 год</option>
+<option value ="a2">5 лет</option>
+<option value ="a3">10 лет</option>
 </select></br>
 Сумма страховки <select name="sum">
 name="pasport" id="pasport"/></br>
-option value ="b1">100000</option>
-option value ="b2">500000</option>
+<option value ="b1">100000</option>
+<option value ="b2">500000</option>
 </select></br>
 <input type="submit" 
 name="submit" value="Рассчитать"
