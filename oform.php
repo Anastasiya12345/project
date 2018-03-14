@@ -42,7 +42,7 @@ name="serpas" id="serpas"/></br>
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br> 
 <p><input type="file" name="pasport"
-accept="image/jpeg">
+accept="image/jpeg"></br>
 Срок страховой службы <select name="srok">
 <option value ="a1">1 год</option>
 <option value ="a2">5 лет</option>
