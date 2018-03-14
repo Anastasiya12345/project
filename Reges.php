@@ -24,13 +24,7 @@ border: 0 none; }
 <body> 
 <h1>Регистрация пользователей</h1> 
 <form method="post" action="index.php" 
-enctype="multipart/form-data" > 
-Фамилия <input type="text" 
-name="familiya" id="familiya"/></br> 
-Имя <input type="text" 
-name="imya" id="imya"/></br> 
-Отчество <input type="text" 
-name="otchestvo" id="otchestvo"/></br> 
+enctype="multipart/form-data" ></br> 
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br> 
 Пароль <input type="text" 
