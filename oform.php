@@ -31,6 +31,10 @@ name="familiya" id="familiya"/></br>
 name="imya" id="imya"/></br> 
 Отчество <input type="text" 
 name="otchestvo" id="otchestvo"/></br> 
+Пол <select name="pol">
+<option value ="d1">Жен</option>
+<option value ="d2">Муж</option>
+</select></br>
 Номер паспорта <input type="text" 
 name="nomtel" id="nomtel"/></br> 
 Серия паспорта <input type="text" 
@@ -40,7 +44,6 @@ name="nomtel" id="nomtel"/></br>
 Паспорт <input type="text" 
 name="pasport" id="pasport"/></br>
 Срок страховой службы <select name="srok">
-name="pasport" id="pasport"/></br>
 <option value ="a1">1 год</option>
 <option value ="a2">5 лет</option>
 <option value ="a3">10 лет</option>
@@ -54,6 +57,12 @@ name="pasport" id="pasport"/></br>
 name="submit" value="Рассчитать"
 Ежегодный платеж <input type="text" 
 name="plata" id="plata"/></br>
+Способ оплаты <select name="sposobopl">
+<option value ="g1">Карта Wisa</option>
+<option value ="g2">Карта МИР</option>
+</select></br>
+Номер карты <input type="text" 
+name="nomkar" id="nomkar"/></br>
 <input type="submit" 
 name="submit1" value="Оформить"
 </form> 
