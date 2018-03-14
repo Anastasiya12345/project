@@ -30,9 +30,9 @@ name="nomtel" id="nomtel"/></br>
 Пароль <input type="text" 
 name="password" id="password"/></br>
 <input type="submit" 
-name="submit" value="Войти" 
+name="submit" value="Войти"/></br>
 <input type="submit" 
-name="submit1" value="Регестрация"/> 
+name="submit1" value="Регестрация"/></br>
 <?php /*
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
