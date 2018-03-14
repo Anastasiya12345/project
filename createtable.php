@@ -5,11 +5,17 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "CREATE TABLE registration1_tbl1( 
 id INT NOT NULL IDENTITY(1,1) 
 PRIMARY KEY(id), 
-name VARCHAR(30), 
-email VARCHAR(30), 
-password VARCHAR(30),
-vopros VARCHAR(50), 
-otvet VARCHAR(30), 
+familiya VARCHAR(30), 
+imya VARCHAR(30), 
+otchestvo VARCHAR(30),
+nomtel VARCHAR(11), 
+srok INTEGER(1), 
+sum INTEGER(6), 
+nompas VARCHAR(6), 
+serpas VARCHAR(4), 
+plata VARCHAR(6), 
+sposobopl VARCHAR(4)
+nomkar VARCHAR(16)
 date DATE)"; 
 $conn->query($sql); 
 } 
