@@ -52,6 +52,10 @@ name="pasport" id="pasport"/></br>
 </select></br>
 <input type="submit" 
 name="submit" value="Рассчитать"
+Ежегодный платеж <input type="text" 
+name="plata" id="plata"/></br>
+<input type="submit" 
+name="submit1" value="Оформить"
 </form> 
 </body> 
 </html>
