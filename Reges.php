@@ -31,6 +31,7 @@ name="nomtel" id="nomtel"/></br>
 name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Регестрация"
+<a href="https://anastasiya.azurewebsites.net/index.php">Вход</a>
 </form> 
 </body> 
 </html>
