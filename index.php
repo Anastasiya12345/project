@@ -29,7 +29,7 @@ enctype="multipart/form-data" >
 name="nomtel" id="nomtel"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
-<a href="https://anastasiya.azurewebsites.net/oform.php">Регестрация</a>
+<a href="https://anastasiya.azurewebsites.net/oform.php">Вход</a></br>
 <a href="https://anastasiya.azurewebsites.net/Reges.php">Регестрация</a>
 <?php /*
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
