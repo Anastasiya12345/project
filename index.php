@@ -32,7 +32,8 @@ name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Войти"/></br>
 <input type="submit" 
-name="submit1" value="Регестрация" onclick=' https://...../Reges.php'/></br>
+name="submit1" value="Регестрация"/></br>
+<a href="https://anastasiya.azurewebsites.net/Reges.php">Регестрация</a>
 <?php /*
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
