@@ -32,6 +32,36 @@ name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Регестрация"/></br>
 <a href="https://anastasiya.azurewebsites.net/index.php">Вход</a>
+<?php 
+try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} 
+catch (PDOException $e) { 
+print("Error connecting to SQL Server."); 
+die(print_r($e)); 
+} 
+
+if(isset($_POST["submit"])) {
+if(!empty($_POST)) { 
+try { 
+$nomtel = $_POST['nomtel']; 
+$password = $_POST['password']; 
+// Insert data 
+$sql_insert = 
+"INSERT INTO registration_tbl1 (nomtel, password) 
+VALUES (?,?)"; 
+$stmt = $conn->prepare($sql_insert); 
+$stmt->bindValue(1, $nomtel); 
+$stmt->bindValue(2, $password); 
+  $stmt->execute(); 
+} 
+catch(Exception $e)
+{ 
+die(var_dump($e));  
+}  
+}
+}
+  ?>
 </form> 
 </body> 
 </html>
