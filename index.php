@@ -31,7 +31,7 @@ name="nomtel" id="nomtel"/></br>
 name="password" id="password"/></br>
 <a href="https://anastasiya.azurewebsites.net/oform.php">Вход</a></br>
 <a href="https://anastasiya.azurewebsites.net/Reges.php">Регестрация</a>
-<?php /*
+<?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
@@ -41,28 +41,22 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$name = $_POST['name']; 
-$email = $_POST['email']; 
-$date = date("Y-m-d"); 
-$password = $_POST['password'];
-$vopros = $_POST['vopros'];
-$otvet = $_POST['otvet'];
+$nomtel = $_POST['nomtel']; 
+$password = $_POST['password']; 
 // Insert data 
 $sql_insert = 
-"INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet) 
+"INSERT INTO registration_tbl1 (nomtel, password) 
 VALUES (?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $name); 
-$stmt->bindValue(2, $email); 
-$stmt->bindValue(3, $date); 
-$stmt->bindValue(4, $password); 
-$stmt->bindValue(5, $vopros); 
-$stmt->bindValue(6, $otvet); 
+$stmt->bindValue(1, $nomtel); 
+$stmt->bindValue(2, $password); 
   $stmt->execute(); 
 } 
-catch(Exception $e) { 
+catch(Exception $e)
+{ 
 die(var_dump($e));  
-}  */
+}  
+}
   ?>
 </form> 
 </body> 
