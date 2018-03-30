@@ -53,7 +53,7 @@ $sql_insert =
 VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $nomtel);
-$stmt->bindValue(2, $password);
+$stmt->bindValue(4, $password);
 $stmt->execute();
 }
 //Вывод ошибку
