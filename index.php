@@ -31,7 +31,7 @@ name="nomtel" id="nomtel"/></br>
 name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Регестрация"/></br>
-<a href="https://anastasiya.azurewebsites.net/index.php">Вход</a></br>
+<a href="https://anastasiya.azurewebsites.net/vhod.php">Вход</a></br>
 <?php
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
