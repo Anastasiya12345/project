@@ -32,36 +32,56 @@ name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Регестрация"/></br>
 <a href="https://anastasiya.azurewebsites.net/index.php">Вход</a>
-<?php 
+<?php
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} 
-catch (PDOException $e) { 
-print("Error connecting to SQL Server."); 
-die(print_r($e)); 
-} 
-
-if(isset($_POST["submit"])) {
-if(!empty($_POST)) { 
-try { 
-$nomtel = $_POST['nomtel']; 
-$password = $_POST['password']; 
-// Insert data 
-$sql_insert = 
-"INSERT INTO registration_tbl1 (nomtel, password) 
-VALUES (?,?)"; 
-$stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $nomtel); 
-$stmt->bindValue(2, $password); 
-  $stmt->execute(); 
-} 
-catch(Exception $e)
-{ 
-die(var_dump($e));  
-}  
 }
+catch (PDOException $e) {
+print("Error connecting to SQL Server.");
+die(print_r($e));
 }
-  ?>
+//Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
+if(!empty($_POST)) {
+try {
+$nomtel = $_POST['nomtel'];
+$password = $_POST['password'];
+//Регистрация
+// Insert data
+//Запись в БД
+$sql_insert =
+"INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet)
+VALUES (?,?)";
+$stmt = $conn->prepare($sql_insert);
+$stmt->bindValue(1, $nomtel);
+$stmt->bindValue(4, $password);
+$stmt->execute();
+}
+//Вывод ошибку
+catch(Exception $e) {
+die(var_dump($e));
+}
+echo "<h3>Поздравляем, регистрация прошла успешно. Нажмите ВХОД, чтобы войти в систему</h3>";
+}
+//Вывод таблицы
+$sql_select = "SELECT * FROM registration_tbl1";
+$stmt = $conn->query($sql_select);
+$registrants = $stmt->fetchAll();
+//Условие. Если количество записей больше 0, тогда выводится записи полей. В противном случае выводится ошибка о регестрации.
+if(count($registrants) > 0) {
+echo "<h2>Зарегестрированные</h2>";
+echo "<table>";
+echo "<tr><th>nomtel</th>";
+echo "<th>password</th>";
+foreach($registrants as $registrant) {
+echo "<tr><td>".$registrant['nomtel']."</td>";
+echo "<td>".$registrant['password']."</td>";
+}
+echo "</table>";
+} else 
+{
+echo "<h3>Вы не зарегестрированны</h3>";
+}
+?>
 </form> 
 </body> 
 </html>
