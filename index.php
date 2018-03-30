@@ -45,19 +45,9 @@ if(!empty($_POST["submit"])) {
 try {
 $nomtel = $_POST['nomtel'];
 $password = $_POST['password'];
-  if ($nomtel == "" || $password == "") {
-           echo "<h3>Не заполнены поля.</h3>";
 //Регистрация
 // Insert data
 //Запись в БД
-    else {
-$sql_insert =
-"INSERT INTO registration_tbl1 (nomtel, password) VALUES (?,?)";
-$stmt = $conn->prepare($sql_insert);
-$stmt->bindValue(1, $nomtel);
-$stmt->bindValue(2, $password);
-$stmt->execute();
-    }
 }
 //Вывод ошибку
 catch(Exception $e) {
