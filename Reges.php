@@ -49,7 +49,7 @@ $password = $_POST['password'];
 // Insert data
 //Запись в БД
 $sql_insert =
-"INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet)
+"INSERT INTO registration_tbl1 (nomtel, password)
 VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $nomtel);
