@@ -23,7 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация пользователей</h1> 
-<form method="post" action="Reges.php" 
+<form method="post" action="index.php" 
 enctype="multipart/form-data" ></br> 
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br> 
