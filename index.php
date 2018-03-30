@@ -31,7 +31,7 @@ name="nomtel" id="nomtel"/></br>
 name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Регестрация"/></br>
-<a href="https://anastasiya.azurewebsites.net/index.php">Вход</a>
+<a href="https://anastasiya.azurewebsites.net/index.php">Вход</a></br>
 <?php
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -53,7 +53,7 @@ $sql_insert =
 VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $nomtel);
-$stmt->bindValue(4, $password);
+$stmt->bindValue(2, $password);
 $stmt->execute();
 }
 //Вывод ошибку
