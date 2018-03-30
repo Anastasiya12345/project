@@ -45,7 +45,7 @@ if(!empty($_POST["submit"])) {
 try {
 $nomtel = $_POST['nomtel'];
 $password = $_POST['password'];
-  if ($name == "" || $email == "") {
+  if ($nomtel == "" || $password == "") {
            echo "<h3>Не заполнены поля.</h3>";
 //Регистрация
 // Insert data
