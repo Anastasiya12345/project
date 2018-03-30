@@ -23,14 +23,14 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Вход</h1> 
-<form method="post" action="index.php" 
+<form method="post" action="vhod.php" 
 enctype="multipart/form-data" > 
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
 <a href="https://anastasiya.azurewebsites.net/oform.php">Вход</a></br>
-<a href="https://anastasiya.azurewebsites.net/Reges.php">Регестрация</a>
+<a href="https://anastasiya.azurewebsites.net/index.php">Регестрация</a>
 <?php 
 /*
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
