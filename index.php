@@ -41,20 +41,23 @@ print("Error connecting to SQL Server.");
 die(print_r($e));
 }
 //Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
-if(!empty($_POST)) {
+if(!empty($_POST["submit"])) {
 try {
 $nomtel = $_POST['nomtel'];
 $password = $_POST['password'];
+  if ($name == "" || $email == "") {
+           echo "<h3>Не заполнены поля.</h3>";
 //Регистрация
 // Insert data
 //Запись в БД
+    else {
 $sql_insert =
-"INSERT INTO registration_tbl1 (nomtel, password)
-VALUES (?,?)";
+"INSERT INTO registration_tbl1 (nomtel, password) VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $nomtel);
-$stmt->bindValue(4, $password);
+$stmt->bindValue(2, $password);
 $stmt->execute();
+    }
 }
 //Вывод ошибку
 catch(Exception $e) {
@@ -62,6 +65,7 @@ die(var_dump($e));
 }
 echo "<h3>Поздравляем, регистрация прошла успешно. Нажмите ВХОД, чтобы войти в систему</h3>";
 }
+   $conn = null;
 //Вывод таблицы
 $sql_select = "SELECT * FROM registration_tbl1";
 $stmt = $conn->query($sql_select);
