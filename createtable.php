@@ -10,6 +10,7 @@ imya VARCHAR(30),
 otchestvo VARCHAR(30),
 password VARCHAR(30),
 nomtel VARCHAR(11), 
+tel VARCHAR(11)
 srok INTEGER(1), 
 sum INTEGER(6), 
 nompas VARCHAR(6), 
