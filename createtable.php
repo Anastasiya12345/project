@@ -1,4 +1,3 @@
-
 <?php 
 try { 
 $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
