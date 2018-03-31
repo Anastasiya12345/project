@@ -3,7 +3,7 @@ try {
 $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "CREATE TABLE registration_t( 
-id INT NOT NULL IDENTITY(1,1) 
+id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id), 
 familiya VARCHAR(30), 
 imya VARCHAR(30), 
