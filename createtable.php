@@ -1,9 +1,10 @@
+
 <?php 
 try { 
 $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "CREATE TABLE registration_tbl1( 
-id INT NOT NULL IDENTITY(1,1),
+$sql = "CREATE TABLE registration_tbl( 
+id INT NOT NULL IDENTITY(1,1)
 PRIMARY KEY(id), 
 familiya VARCHAR(30), 
 imya VARCHAR(30), 
@@ -24,4 +25,5 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 } 
+echo "<h3>Table created.</h3>";
 ?>
