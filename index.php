@@ -26,7 +26,7 @@ border: 0 none; }
 <form method="post" action="index.php" 
 enctype="multipart/form-data" ></br> 
 Номер телефона <input type="text" 
-name="nomtel" id="nomtel"/></br> 
+name="tel" id="tel"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
 <input type="submit" 
@@ -43,7 +43,7 @@ die(print_r($e));
 //Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
 if(!empty($_POST)) {
 try {
-$nomtel = $_POST['nomtel'];
+$tel = $_POST['tel'];
 $password = $_POST['password'];
 //Регистрация
 // Insert data
@@ -52,7 +52,7 @@ $password = $_POST['password'];
 "INSERT INTO registration_tbl1 (nomtel, password)
 VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
-$stmt->bindValue(1, $nomtel);
+$stmt->bindValue(1, $tel);
 $stmt->bindValue(2, $password); 
     $stmt->execute(); 
 }
@@ -70,10 +70,10 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
 echo "<h2>Зарегестрированные</h2>";
 echo "<table>";
-echo "<tr><th>nomtel</th>";
+echo "<tr><th>tel</th>";
 echo "<th>password</th>";
 foreach($registrants as $registrant) {
-echo "<tr><td>".$registrant['nomtel']."</td>";
+echo "<tr><td>".$registrant['tel']."</td>";
 echo "<td>".$registrant['password']."</td>";
 }
 echo "</table>";
