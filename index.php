@@ -49,7 +49,7 @@ $password = $_POST['password'];
 // Insert data
 //Запись в БД
    $sql_insert =
-"INSERT INTO registration_tbl2 (nomtel, password)
+"INSERT INTO registration_tbl1 (nomtel, password)
 VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $nomtel);
@@ -63,7 +63,7 @@ die(var_dump($e));
    echo "<h3>Your're registered!</h3>"; 
 }
 //Вывод таблицы
-$sql_select = "SELECT * FROM registration_tbl2";
+$sql_select = "SELECT * FROM registration_tbl1";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
 //Условие. Если количество записей больше 0, тогда выводится записи полей. В противном случае выводится ошибка о регестрации.
