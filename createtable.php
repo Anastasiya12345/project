@@ -12,7 +12,7 @@ password VARCHAR(30),
 tel VARCHAR(30),
 srok INT(1), 
 sum DECIMAL(15,2)
-nompas VARCHAR(30), 
+pasport VARCHAR(30), 
 serpas VARCHAR(30), 
 plata VARCHAR(30), 
 sposobopl VARCHAR(30),
