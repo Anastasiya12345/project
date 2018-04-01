@@ -9,14 +9,14 @@ familiya VARCHAR(30),
 imya VARCHAR(30), 
 otchestvo VARCHAR(30),
 password VARCHAR(30),
-tel VARCHAR(11),
+tel VARCHAR(30),
 srok INT(1), 
 sum DECIMAL(15,2)
-nompas VARCHAR(6), 
-serpas VARCHAR(4), 
-plata VARCHAR(6), 
-sposobopl VARCHAR(4),
-nomkar VARCHAR(16),
+nompas VARCHAR(30), 
+serpas VARCHAR(30), 
+plata VARCHAR(30), 
+sposobopl VARCHAR(30),
+nomkar VARCHAR(30),
 date DATE)"; 
 $conn->query($sql); 
   
