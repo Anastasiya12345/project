@@ -31,6 +31,14 @@ enctype="multipart/form-data" ></br>
 name="tel" id="tel"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
+ <div>
+              <select name ="gender"  class ="gen">
+                <option value ="">All</option>
+                <option value ="Man" <?php if($gender == 'Man'){echo 'selected';}?>>Man</option>
+                <option value ="Woman" <?php if($gender == 'Woman'){echo 'selected';}?>>Woman</option>
+              </select>
+              <input type="submit" name="filter" class="btn" value="Фильтр">
+</div>
 <input type="submit" 
 name="submit" value="Регестрация"/></br>
 <a href="https://anastasiya.azurewebsites.net/vhod.php">Вход</a></br>
