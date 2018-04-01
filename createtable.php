@@ -19,10 +19,11 @@ sposobopl VARCHAR(4),
 nomkar VARCHAR(16),
 date DATE)"; 
 $conn->query($sql); 
+  
+echo "<h3>Таблица создана!</h3>";
 } 
-catch (PDOException $e) { 
-print("Error connecting to SQL Server."); 
-die(print_r($e)); 
-} 
-echo "<h3>Table created.</h3>";
+catch (PDOException $e) {
+    print("Ошибка подключения к SQL Server.");
+    die(print_r($e));
+}
 ?>
