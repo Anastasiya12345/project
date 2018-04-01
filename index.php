@@ -1,8 +1,6 @@
 <html> 
 <head> 
 <Title>Страхование</Title>
- <link rel ="stylesheet" href ="/style.css">
-<link rel ="stylesheet" href ="/form.css">
 <style type="text/css"> 
 body { background-color: 
 #fff; border-top: solid 10px #000; 
