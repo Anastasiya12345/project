@@ -31,10 +31,8 @@ name="familiya" id="familiya"/></br>
 name="imya" id="imya"/></br> 
 Отчество <input type="text" 
 name="otchestvo" id="otchestvo"/></br> 
-Номер паспорта <input type="text" 
-name="nompas" id="nompas"/></br> 
-Серия паспорта <input type="text" 
-name="serpas" id="serpas"/></br> 
+Серия и номер паспорта <input type="text" 
+name="pas" id="pas"/></br> 
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br>
 Загрузите отсканированную копию паспорта (2-3 и 4-5 страницы на одном листе) в формате JPEG.</br>
@@ -62,6 +60,77 @@ name="plata" id="plata"/></br>
 name="nomkar" id="nomkar"/></br>
 <input type="submit" 
 name="submit1" value="Оформить"
+       <?php
+try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+print("Ошибка подключения к SQL Server.");
+die(print_r($e));
+}
+//Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
+if(!empty($_POST)) {
+try {
+$imya = $_POST['imya'];
+$familiya = $_POST['familiya'];
+$otchestvo = $_POST['otchestvo'];
+$pas = $_POST['pas'];
+$nomtel = $_POST['nomtel'];
+$plata = $_POST['plata'];
+$sposobopl = $_POST['sposobopl'];
+//Регистрация
+// Insert data
+//Запись в БД
+   $sql_insert =
+"INSERT INTO registration_tbl (imya, familiya, otchestvo, pas, nomtel, plata, sposobopl)
+VALUES (?,?,?,?,?,?,?)";
+$stmt = $conn->prepare($sql_insert);
+$stmt->bindValue(1, $imya);
+$stmt->bindValue(2, $familiya); 
+  $stmt->bindValue(3, $otchestvo); 
+  $stmt->bindValue(4, $pas); 
+  $stmt->bindValue(5, $nomtel); 
+  $stmt->bindValue(6, $plata); 
+  $stmt->bindValue(7, $sposobopl); 
+    $stmt->execute(); 
+}
+//Вывод ошибку
+catch(Exception $e) {
+die(var_dump($e));
+}
+   echo "<h3>Ваша заявкаоформлена!</h3>"; 
+}
+//Вывод таблицы
+$sql_select = "SELECT * FROM registration_tbl";
+$stmt = $conn->query($sql_select);
+$registrants = $stmt->fetchAll();
+//Условие. Если количество записей больше 0, тогда выводится записи полей. В противном случае выводится ошибка о регестрации.
+if(count($registrants) > 0) {
+echo "<h2>В БД внесено</h2>";
+echo "<table>";
+echo "<tr><th>imya</th>";
+echo "<th>familiya</th>";
+  echo "<th>otchestvo</th>";
+  echo "<th>pas</th>";
+  echo "<th>nomtel</th>";
+  echo "<th>plata</th>";
+  echo "<th>sposobopl</th>";
+  
+foreach($registrants as $registrant) {
+echo "<tr><td>".$registrant['imya']."</td>";
+echo "<td>".$registrant['password']."</td>";
+  echo "<td>".$registrant['otchestvo']."</td>";
+  echo "<td>".$registrant['pas']."</td>";
+  echo "<td>".$registrant['nomtel']."</td>";
+  echo "<td>".$registrant['plata']."</td>";
+  echo "<td>".$registrant['sposobopl']."</td>";
+}
+echo "</table>";
+} else 
+{
+echo "<h3>Ваша заявка не оформлена</h3>";
+}
+?>
 </form> 
 </body> 
 </html>
