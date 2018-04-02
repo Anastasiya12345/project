@@ -29,7 +29,8 @@ enctype="multipart/form-data" >
 name="nomtel" id="nomtel"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
-<a href="https://anastasiya.azurewebsites.net/oform.php">Вход</a></br>
+<input type="submit" 
+name="submit" value="Войти"/></br>
 <a href="https://anastasiya.azurewebsites.net/index.php">Регестрация</a>
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
@@ -50,8 +51,7 @@ session_start();
 $_SESSION['name'] = $row["Name"];
 $_SESSION['secondName'] = $row["secondName"];
 $_SESSION['nomtel'] = $nomtel;
-$_SESSION['id'] = $row["id"]
-header('location: index.php');
+echo "<h3>Вы вошли</h3>"
 }
 }
 }
