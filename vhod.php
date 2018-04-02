@@ -43,7 +43,7 @@ die(print_r($e));
 if (isset($_POST['submit'])) {
 $nomtel = $_POST['nomtel'];
 $password = $_POST['password'];
-$sql_select = "SELECT * FROM Enter where (nomtel = '$nomtel' And password = '$password')";
+$sql_select = "SELECT * FROM Enter where (tel = '$nomtel' And password = '$password')";
 $stmt = $conn->query($sql_select);
 if ($stmt->fetchColumn() > 0){
 foreach ($n as $row) {
