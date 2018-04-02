@@ -39,23 +39,21 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 } 
-if(!empty($_POST)) { 
-try { 
-$nomtel = $_POST['nomtel']; 
-$password = $_POST['password']; 
-// Insert data 
-$sql_insert = 
-"INSERT INTO registration_tbl1 (nomtel, password) 
-VALUES (?,?,?,?,?,?)"; 
-$stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $nomtel); 
-$stmt->bindValue(2, $password); 
-  $stmt->execute(); 
-} 
-catch(Exception $e)
-{ 
-die(var_dump($e));  
-}  
+if (isset($_POST['submit'])) {
+$nomtel = $_POST['nomtel'];
+$password = $_POST['password'];
+$sql_select = "SELECT * FROM Enter where (nomtel = '$nomtel' And password = '$password')";
+$stmt = $conn->query($sql_select);
+if ($stmt->fetchColumn() > 0){
+foreach ($n as $row) {
+session_start();
+$_SESSION['name'] = $row["Name"];
+$_SESSION['secondName'] = $row["secondName"];
+$_SESSION['nomtel'] = $nomtel;
+$_SESSION['id'] = $row["id"]
+header('location: index.php');
+}
+}
 }
   ?>
 </form> 
