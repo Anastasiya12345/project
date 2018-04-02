@@ -40,7 +40,7 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 } 
-if (isset($_POST['submit'])) {
+/*if (isset($_POST['submit'])) {
 $nomtel = $_POST['nomtel'];
 $pass = $_POST['pass'];
 $sql_select = "SELECT * FROM registration_tbl where (tel = '$nomtel' And password = '$pass')";
@@ -49,7 +49,7 @@ echo "<h3>Вы вошли</h3>"
 }
 }
 }
-  ?>
+*/  ?>
 </form> 
 </body> 
 </html>
