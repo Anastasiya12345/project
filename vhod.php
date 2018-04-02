@@ -48,9 +48,8 @@ $stmt = $conn->query($sql_select);
 if ($stmt->fetchColumn() > 0){
 foreach ($n as $row) {
 session_start();
-$_SESSION['name'] = $row["Name"];
-$_SESSION['secondName'] = $row["secondName"];
-$_SESSION['nomtel'] = $nomtel;
+$_SESSION['id'] = $row["id"]
+header('location: index.php');
 echo "<h3>Вы вошли</h3>"
 }
 }
