@@ -28,7 +28,7 @@ enctype="multipart/form-data" >
 Номер телефона <input type="text" 
 name="nomtel" id="nomtel"/></br> 
 Пароль <input type="text" 
-name="password" id="password"/></br>
+name="pass" id="pass"/></br>
 <input type="submit" 
 name="submit" value="Войти"/></br>
 <a href="https://anastasiya.azurewebsites.net/index.php">Регестрация</a>
@@ -42,8 +42,8 @@ die(print_r($e));
 } 
 if (isset($_POST['submit'])) {
 $nomtel = $_POST['nomtel'];
-$password = $_POST['password'];
-$sql_select = "SELECT * FROM registration_tbl where (tel = '$nomtel' And password = '$password')";
+$pass = $_POST['pass'];
+$sql_select = "SELECT * FROM registration_tbl where (tel = '$nomtel' And password = '$pass')";
 $stmt = $conn->query($sql_select);
 if ($stmt->fetchColumn() > 0){
 foreach ($n as $row) {
