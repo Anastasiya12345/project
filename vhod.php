@@ -45,11 +45,6 @@ $nomtel = $_POST['nomtel'];
 $pass = $_POST['pass'];
 $sql_select = "SELECT * FROM registration_tbl where (tel = '$nomtel' And password = '$pass')";
 $stmt = $conn->query($sql_select);
-if ($stmt->fetchColumn() > 0){
-foreach ($n as $row) {
-session_start();
-$_SESSION['id'] = $row["id"]
-header('location: index.php');
 echo "<h3>Вы вошли</h3>"
 }
 }
