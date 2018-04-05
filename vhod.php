@@ -44,6 +44,7 @@ session_start();
 $_SESSION['nomtel'] = $row["nomtel"];
 $_SESSION['password'] = $row["password"];
 header('location: vhod.php');
+  echo "<h3>Вы вошли!</h3>"
 }
 }
 } 
