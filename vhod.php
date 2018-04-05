@@ -33,10 +33,17 @@ name="pass" id="pass"/></br>
 name="submit" value="Войти"/></br>
 <a href="https://anastasiya.azurewebsites.net/index.php">Регестрация</a>
 <?php  
+try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = db", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} 
+catch (PDOException $e) { 
+print("Error connecting to SQL Server."); 
+die(print_r($e)); 
+}
 if (isset($_POST['submit'])) {
 $nomtel = $_POST['nomtel'];
 $password = $_POST['password'];
-$sql_select = "SELECT * FROM Enter where (password = '$password' And nomtel = '$nomtel')";
+$sql_select = "SELECT * FROM registration_tbl where (password = '$password' And nomtel = '$nomtel')";
 $stmt = $conn->query($sql_select);
 if ($stmt->fetchColumn() > 0){
 foreach ($n as $row) {
