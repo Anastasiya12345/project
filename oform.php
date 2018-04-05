@@ -68,6 +68,11 @@ catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
 die(print_r($e));
 }
+session_start();
+if (!isset($_SESSION['nomtel'])) {
+$_SESSION['msg'] = "You must log in first";
+header('location: vhod.php');
+} 
 //Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
 if(!empty($_POST)) {
 try {
