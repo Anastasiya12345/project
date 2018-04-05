@@ -40,16 +40,21 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server."); 
 die(print_r($e)); 
 } 
-/*if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 $nomtel = $_POST['nomtel'];
-$pass = $_POST['pass'];
-$sql_select = "SELECT * FROM registration_tbl where (tel = '$nomtel' And password = '$pass')";
+$password = $_POST['password'];
+$sql_select = "SELECT * FROM Enter where (password = '$password' And nomtel = '$nomtel')";
 $stmt = $conn->query($sql_select);
-echo "<h3>Вы вошли</h3>"
+if ($stmt->fetchColumn() > 0){
+foreach ($n as $row) {
+session_start();
+$_SESSION['nomtel'] = $row["nomtel"];
+$_SESSION['password'] = $row["password"];
+header('location: index.php');
 }
 }
-}
-*/  ?>
+} 
+?>
 </form> 
 </body> 
 </html>
