@@ -50,7 +50,7 @@ foreach ($n as $row) {
 session_start();
 $_SESSION['nomtel'] = $row["nomtel"];
 $_SESSION['password'] = $row["password"];
-header('location: index.php');
+header('location: vhod.php');
 }
 }
 } 
