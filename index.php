@@ -68,11 +68,6 @@ $stmt->bindValue(1, $tel);
 $stmt->bindValue(2, $password); 
     $stmt->execute(); 
 }
-//Вывод ошибку
-catch(Exception $e) {
-die(var_dump($e));
-}
-   echo "<h3>Your're registered!</h3>"; 
 }
 //Вывод таблицы
 $sql_select = "SELECT * FROM registration_tbl";
