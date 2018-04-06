@@ -42,9 +42,37 @@ die(print_r($e));
 }
 if (isset($_POST['submit'])) {
 $nomtel = $_POST['nomtel'];
-$password = $_POST['password'];
-$sql_select = "SELECT * FROM registration_tbl where (password = '$password' And nomtel = '$nomtel')";
+$pass = $_POST['pass'];
+$sql_select = "SELECT * FROM registration_tbl where (password = '$pass' And tel = '$nomtel')";
 $stmt = $conn->query($sql_select);
+  if ($stmt->fetchColumn() > 0){
+
+session_start();
+
+$sql_select1 = "Select tel From Klient Join Enter On Klient.id = Enter.id Where tel = '$nomtel'";
+$n = $conn->query($sql_select1);
+
+
+
+foreach ($n as $row) {
+$_SESSION['nomtel'] = $row["tel"];
+}
+
+
+
+
+
+
+
+$_SESSION['success'] = "You are now logged in";
+header('location: index.php');
+
+
+}
+else {echo "<h3 style = 'color: red;'>This user doesn't exist</h3>";}
+}
+
+  /*
 if ($stmt->fetchColumn() > 0){
 foreach ($n as $row) {
 session_start();
@@ -53,7 +81,7 @@ $_SESSION['password'] = $row["password"];
 header('location: vhod.php');   
 }
 }
-} 
+} */
 ?>
 </form> 
 </body> 
