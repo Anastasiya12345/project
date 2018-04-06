@@ -33,15 +33,6 @@ name="password" id="password"/></br>
 name="submit" value="Регестрация"/></br>
 <a href="https://anastasiya.azurewebsites.net/vhod.php">Вход</a></br>
 <?php
-try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-print("Ошибка подключения к SQL Server.");
-die(print_r($e));
-}
-//Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
-
 $data = $_POST;
 $errors[] = array();
 if (trim($data['tel'] == '')
@@ -60,6 +51,15 @@ if (trim($data['tel'] == '')
         {
            echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
         }
+        
+try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+print("Ошибка подключения к SQL Server.");
+die(print_r($e));
+}
+//Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
         
 if(!empty($_POST)) {
 try {
