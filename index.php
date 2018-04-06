@@ -37,20 +37,17 @@ $data = $_POST;
 $errors[] = array();
 if (trim($data['tel'] == '')
     {
-       $errors[] = 'Введите номер телефона!'
+       $errors[] = 'Введите номер телефона!';
+           echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
     }
     if (trim($data['password'] == '')
     {
-       $errors[] = 'Введите пароль!'
+       $errors[] = 'Введите пароль!';
+      echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';     
+        
     }
-        if( emply($errors))
-        {
-           //Регестрируем
-        }
-        else
-        {
-           echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
-        }
+       
+      
         
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
