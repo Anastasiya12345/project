@@ -41,6 +41,26 @@ print("Ошибка подключения к SQL Server.");
 die(print_r($e));
 }
 //Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается.
+
+$data = $_POST;
+$errors[] = array();
+if (trim($data['tel'] == '')
+    {
+       $errors[] = 'Введите номер телефона!'
+    }
+    if (trim($data['password'] == '')
+    {
+       $errors[] = 'Введите пароль!'
+    }
+        if( emply($errors))
+        {
+           //Регестрируем
+        }
+        else
+        {
+           echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
+        }
+        
 if(!empty($_POST)) {
 try {
 $tel = $_POST['tel'];
