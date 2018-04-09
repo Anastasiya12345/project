@@ -45,9 +45,12 @@ if( isset($_POST['ras']) ) {
         $d = ($a*$b/100);
            
         echo "Сумма ежегодного платежа = $d";
+  
       }
+
 ?></br>
 </br>
+
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
