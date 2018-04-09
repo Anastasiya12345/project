@@ -20,7 +20,7 @@ margin-bottom: 0; padding-bottom: 0; }
  text-align: left; border: none; padding-left: 0; }
     td { padding: 0.25em 2em 0.25em 0em;
 border: 0 none; }
-   #zatemnenie {
+          #zatemnenie {
         background: rgba(102, 102, 102, 0.5);
         width: 100%;
         height: 100%;
@@ -58,15 +58,18 @@ border: 0 none; }
         cursor:pointer;
       }
       .close:hover {background: #e6e6ff;}
-     <div id="zatemnenie">
+    </style>
+  </head>
+ 
+  <body>
+   
+    <div id="zatemnenie">
       <div id="okno">
         Всплывающее окошко!<br>
         <a href="#" class="close">Закрыть окно</a>
       </div>
     </div>
-    </style>
-  </head>
-   </body>
+    </body>
 </html>
 <h1>Оформление страхования жизни</h1>
 <a href="#zatemnenie">Вызвать всплывающее окно</a>
