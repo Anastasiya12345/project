@@ -22,16 +22,19 @@ border: 0 none; }
 </style> 
 </head> 
 <body> 
-<h1>Регистрация пользователей</h1> 
+<h1>Оформление заявки</h1> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" ></br> 
+Фамилия <input type="text" 
+name="familiya" id="familiya"/></br> 
+Имя <input type="text" 
+name="imya" id="imya"/></br> 
+Отчество <input type="text" 
+name="otchestvo" id="otchestvo"/></br> 
 Номер телефона <input type="text" 
 name="tel" id="tel"/></br> 
-Пароль <input type="text" 
-name="password" id="password"/></br> 
 <input type="submit" 
-name="submit" value="Регестрация"/></br> 
-<a href="https://anastasiya.azurewebsites.net/vhod.php">Вход</a></br> 
+name="submit" value="Далее"/></br> 
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1"); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -40,29 +43,21 @@ catch (PDOException $e) {
 print("Ошибка подключения к SQL Server."); 
 die(print_r($e)); 
 } 
-//Проверка заполнения при ножатии кнопки. Если поля пустые ничего в БД не записывается. 
-if(!empty($_POST)) { 
-try { 
-$tel = $_POST['tel']; 
-$password = $_POST['password']; 
-//Регистрация 
-// Insert data 
-//Запись в БД 
-$sql_insert = 
-"INSERT INTO registration_tbl (tel, password) 
-VALUES (?,?)"; 
-$stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $tel); 
-$stmt->bindValue(2, $password); 
-$stmt->execute(); 
-} 
-//Вывод ошибку 
-catch(Exception $e) { 
-die(var_dump($e)); 
-} 
-echo "<h3>Your're registered!</h3>"; 
-} 
-//Вывод таблицы 
+$sql_select = "SELECT * FROM klient_tbl";
+$stmt = $conn->query($sql_select);
+
+  if(isset($_POST["submit"])) {
+    if ($stmt->fetchColumn() > 0) {
+      foreach ($n as $row) {
+        session_start();
+        $_SESSION['familiya'] = $row["familiya"];
+        $_SESSION['imya'] = $row["imya"];
+        $_SESSION['otchestvo'] = $row["otchestvo"];
+        $_SESSION['tel'] = $row["tel"];
+        }
+    }
+  }
+
 $sql_select = "SELECT * FROM registration_tbl"; 
 $stmt = $conn->query($sql_select); 
 $registrants = $stmt->fetchAll(); 
@@ -79,7 +74,7 @@ echo "<td>".$registrant['password']."</td>";
 echo "</table>"; 
 } else 
 { 
-echo "<h3>Вы не зарегестрированны</h3>"; 
+echo "<h3>Заявка не оформлена</h3>"; 
 } 
 ?> 
 </form> 
