@@ -24,19 +24,8 @@ border: 0 none; }
 <body> 
 <h1>Оформление заявки на страховку жизни</h1> 
 <form method="post" enctype="multipart/form-data" > 
-Фамилия <input type="text" 
-name="familiya" id="familiya"/></br> 
-Имя <input type="text" 
-name="imya" id="imya"/></br> 
-Отчество <input type="text" 
-name="otchestvo" id="otchestvo"/></br> 
 Серия и номер паспорта <input type="text" 
 name="pas" id="pas"/></br> 
-Номер телефона <input type="text" 
-name="nomtel" id="nomtel"/></br>
-Загрузите отсканированную копию паспорта (2-3 и 4-5 страницы на одном листе) в формате JPEG.</br>
-<input type="file" name="pasport"
-accept="image/jpeg"></br>
 Срок страховой службы <select name="srok">
 <option value ="1">1 год</option>
 <option value ="5">5 лет</option>
@@ -60,6 +49,7 @@ name="nomkar" id="nomkar"/></br>
 <input type="submit" 
 name="submit1" value="Оформить"
        <?php
+       /*
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
@@ -133,7 +123,7 @@ echo "</table>";
 } else 
 {
 echo "<h3>Ваша заявка не оформлена</h3>";
-}
+}*/
 ?>
 </form> 
 </body> 
