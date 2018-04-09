@@ -33,8 +33,9 @@ name="imya" id="imya"/></br>
 name="otchestvo" id="otchestvo"/></br> 
 Номер телефона <input type="text" 
 name="tel" id="tel"/></br> 
-<input type="submit" 
-name="submit" value="Далее"/></br> 
+<div class="field">
+    <button name="submit" class="j-submit-report" onclick="window.location.href='oform.php'">Далее</button>
+</div>
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1"); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
