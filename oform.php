@@ -25,6 +25,7 @@ border: 0 none; }
 <body>
 <h1>Оформление страхования жизни</h1>
 <p><i>Заполните анкету.</i></p>
+<a href=https://anastasiya.azurewebsites.net/rasschet.php><b>Рассчитать ежегодный платеж</b></a>
 <form method="post" action="oform.php">
 Серия и номер паспорта <input type="text" 
 name="pas" id="pas"/></br> 
@@ -45,8 +46,7 @@ name="pasport" id="pasport"/></br>
 Номер карты <input type="text" 
 name="nomkar" id="nomkar"/></br>
 <input type="submit" 
-name="submit1" value="Оформить"</br>
- <a href=https://anastasiya.azurewebsites.net/rasschet.php><b>Рассчитать ежегодный платеж</b></a>
+name="submit1" value="Оформить"></br>
 </form>
 </body>
 </html>
