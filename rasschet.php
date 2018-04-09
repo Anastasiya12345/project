@@ -42,7 +42,6 @@ name="ras" value="Рассчитать"></br>
 </body>
 </html>
 <?php
-/*
   if( isset( $_POST['ras'] ) ){
     $a = (int) $_POST['srok'];
     $b = (int) $_POST['sum'];
