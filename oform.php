@@ -80,32 +80,4 @@ if (isset($_POST['ras'])) {
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
  }
-$sql_select = "SELECT * FROM registration_tbl"; 
-$stmt = $conn->query($sql_select); 
-$registrants = $stmt->fetchAll();  
-if(count($registrants) > 0) { 
-echo "<h2>Заявки</h2>"; 
-echo "<table>"; 
-echo "<th>familiya</th>"; 
-echo "<th>imya</th>"; 
-echo "<th>otchestvo</th>";
-echo "<th>tel</th>"; 
-echo "<th>pas</th>";
-echo "<th>sum</th>";
-echo "<th>srok</th>";
-echo "<th>sposobopl</th>";
-echo "<th>nomkar</th>";
-foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['familiya']."</td>"; 
-echo "<td>".$registrant['imya']."</td>"; 
-  echo "<td>".$registrant['otchestvo']."</td>";
-  echo "<td>".$registrant['tel']."</td>"; 
-  echo "<td>".$registrant['pas']."</td>"; 
-  echo "<td>".$registrant['srok']."</td>"; 
-  echo "<td>".$registrant['sum']."</td>"; 
-  echo "<td>".$registrant['sposobopl']."</td>"; 
-  echo "<td>".$registrant['nomkar']."</td>"; 
-} 
-echo "</table>"; 
-} 
 ?>
