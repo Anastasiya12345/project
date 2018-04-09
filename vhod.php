@@ -23,8 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Оформление заявки на страховку жизни</h1> 
-<form method="post" action="index.php" 
-enctype="multipart/form-data" > 
+<form method="post" enctype="multipart/form-data" > 
 Фамилия <input type="text" 
 name="familiya" id="familiya"/></br> 
 Имя <input type="text" 
