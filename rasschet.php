@@ -42,9 +42,17 @@ name="ras" value="Рассчитать"></br>
 </body>
 </html>
 <?php
+if( isset($_POST['bool_c']) ) {
+      
+        $d = ($_POST['sum']*$_POST['srok']/100;
+                   
+        echo "$d"
+    } ?>
+<?php
+/*
   if( isset( $_POST['ras'] ) ){
     $a = (int) $_POST['srok'];
     $b = (int) $_POST['sum'];
 echo "{$a * $b/100}";
-}
+}*/
 ?>
