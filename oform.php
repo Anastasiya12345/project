@@ -69,15 +69,15 @@ catch (PDOException $e) {
   die(print_r($e));
 }
 if (isset($_POST['ras'])) {
- $familiya = $_SESSION['familiya'];
- $imya = $_SESSION['imya'];
- $otchestvo = $_SESSION['otchestvo'];
- $tel = $_SESSION['tel']; 
- $pas = $_SESSION['pas'];
- $srok = $_SESSION['srok'];
- $sum = $_SESSION['sum'];
- $sposobopl = $_SESSION['sposobopl'];
- $nomkar = $_SESSION['nomkar'];
+ $familiya = $_POST['familiya'];
+ $imya = $_POST['imya'];
+ $otchestvo = $_POST['otchestvo'];
+ $tel = $_POST['tel']; 
+ $pas = $_POST['pas'];
+ $srok = $_POST['srok'];
+ $sum = $_POST['sum'];
+ $sposobopl = $_POST['sposobopl'];
+ $nomkar = $_POST['nomkar'];
     // Insert data
   $sql_insert = "INSERT INTO registration_tbl (familiya, imya, otchestvo, tel, pas, srok, sum, sposobopl, nomkar)
   VALUES (?,?,?,?,?,?,?,?,?)";
