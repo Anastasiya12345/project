@@ -20,6 +20,15 @@ margin-bottom: 0; padding-bottom: 0; }
  text-align: left; border: none; padding-left: 0; }
     td { padding: 0.25em 2em 0.25em 0em;
 border: 0 none; }
+  </body>
+</html>
+<h1>Оформление страхования жизни</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Название документа</title>
+    <style>
       #zatemnenie {
         background: rgba(102, 102, 102, 0.5);
         width: 100%;
@@ -60,23 +69,17 @@ border: 0 none; }
       .close:hover {background: #e6e6ff;}
     </style>
   </head>
- 
-  <body>
-   
-    <div id="zatemnenie">
+   <body>
+       <div id="zatemnenie">
       <div id="okno">
         Всплывающее окошко!<br>
         <a href="#" class="close">Закрыть окно</a>
       </div>
     </div>
-     
-    <a href="#zatemnenie">Рассчитать ежегодный платеж</a>
- 
-  </body>
+         <a href="#zatemnenie">Вызвать всплывающее окно</a>
+   </body>
 </html>
-<h1>Оформление страхования жизни</h1>
 <p><i>Заполните анкету.</i></p>
-<a href=https://anastasiya.azurewebsites.net/rasschet.php><b>Рассчитать ежегодный платеж</b></a>
 <form method="post" action="oform.php">
 Серия и номер паспорта <input type="text" 
 name="pas" id="pas"/></br> 
