@@ -50,6 +50,14 @@ name="ras" value="Рассчитать"></br>
 </html>
 
 <?php
+if( isset($_POST['ras']) ) {
+      $a = (int) $_POST['srok'];
+    $b = (int) $_POST['sum'];
+        $d = ($a*$b/100);
+           
+        echo "Сумма ежегодного платежа = $d";
+      }
+
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
@@ -117,14 +125,5 @@ else
 { 
 echo "<h3>Ваша заявка не оформлена</h3>"; 
 } 
-?>
-<?php
-if( isset($_POST['ras']) ) {
-      $a = (int) $_POST['srok'];
-    $b = (int) $_POST['sum'];
-        $d = ($a*$b/100);
-           
-        echo "Сумма ежегодного платежа = $d";
-  
-    } 
+
 ?>
