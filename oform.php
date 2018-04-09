@@ -44,11 +44,6 @@ name="pasport" id="pasport"/></br>
 Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
 <input type="submit" 
 name="ras" value="Рассчитать"></br>
-</br>
-</form>
-</body>
-</html>
-
 <?php
 if( isset($_POST['ras']) ) {
       $a = (int) $_POST['srok'];
@@ -58,6 +53,10 @@ if( isset($_POST['ras']) ) {
         echo "Сумма ежегодного платежа = $d";
       }
 ?>
+</br>
+</form>
+</body>
+</html>
 <?php
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
