@@ -30,8 +30,8 @@ border: 0 none; }
         display: none;
       }
       #okno {
-        width: 300px;
-        height: 50px;
+        width: 500px;
+        height: 150px;
         text-align: center;
         padding: 15px;
         border: 3px solid #0000cc;
