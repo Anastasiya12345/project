@@ -52,8 +52,7 @@ if( isset($_POST['ras']) ) {
            
         echo "Сумма ежегодного платежа = $d";
       }
-?>
-</br>
+?></br>
 </form>
 </body>
 </html>
