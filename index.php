@@ -24,7 +24,7 @@ border: 0 none; }
 <body> 
 <h1>Оформление заявки</h1> 
 <p><i>Введите свои данные и нажмите <strong> "Далее" </strong> .</i></p>
-<form method="post" action="oform.php">
+<form method="post" action="zayavka.php">
 Фамилия <input type="text" 
 name="familiya" id="familiya"/></br> 
 Имя <input type="text" 
