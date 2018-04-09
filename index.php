@@ -24,7 +24,7 @@ border: 0 none; }
 <body> 
 <h1>Оформление заявки</h1> 
 <p>Введите свои данные и нажмите <strong> "Далее" </strong> .</p>
-<form method="post">
+<form method="post" action="oform.php">
 Фамилия <input type="text" 
 name="familiya" id="familiya"/></br> 
 Имя <input type="text" 
@@ -33,9 +33,7 @@ name="imya" id="imya"/></br>
 name="otchestvo" id="otchestvo"/></br> 
 Номер телефона <input type="text" 
 name="tel" id="tel"/></br> 
-<div class="field">
-    <button name="submit" class="j-submit-report" onclick="window.location.href='oform.php'">Далее</button>
-</div>
+ <input type="submit" name="submit" value="Далее"/>
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1"); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
