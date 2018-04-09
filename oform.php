@@ -66,7 +66,7 @@ border: 0 none; }
     </div>
     </style>
   </head>
-   Б/body>
+   </body>
 </html>
 <h1>Оформление страхования жизни</h1>
 <a href="#zatemnenie">Вызвать всплывающее окно</a>
