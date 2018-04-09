@@ -38,10 +38,6 @@ name="pasport" id="pasport"/></br>
 <option value ="100000">100000</option>
 <option value ="500000">500000</option>
 </select></br>
-<input type="submit" 
-name="rasschet" value="Рассчитать"
-Ежегодный платеж <input type="text" 
-name="plata" id="plata"/></br>
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
@@ -50,6 +46,7 @@ name="plata" id="plata"/></br>
 name="nomkar" id="nomkar"/></br>
 <input type="submit" 
 name="submit1" value="Оформить"
+ <a href=https://anastasiya.azurewebsites.net/rasschet.php <b>Рассчитать ежегодный платеж</b></a>
 </form>
 </body>
 </html>
