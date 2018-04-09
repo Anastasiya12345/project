@@ -79,7 +79,7 @@ if (isset($_POST['ras'])) {
  $sposobopl = $_SESSION['sposobopl'];
  $nomkar = $_SESSION['nomkar'];
     // Insert data
-  $sql_insert = "INSERT INTO registration_tbl (familiya,imya,otchestvo,tel,pas,srok,sum,sposobopl,nomkar)
+  $sql_insert = "INSERT INTO registration_tbl (familiya, imya, otchestvo, tel, pas, srok, sum, sposobopl, nomkar)
   VALUES (?,?,?,?,?,?,?,?,?)";
  $stmt = $conn->prepare($sql_insert);
  $stmt->bindValue(1, $familiya);
@@ -121,9 +121,4 @@ echo "<td>".$registrant['imya']."</td>";
 } 
 echo "</table>"; 
 } 
-else 
-{ 
-echo "<h3>Ваша заявка не оформлена</h3>"; 
-} 
-
 ?>
