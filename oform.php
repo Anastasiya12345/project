@@ -54,7 +54,7 @@ border: 0 none; }
         margin: 10px;
         text-decoration: none;
         background: #f2f2f2;
-        font-size: 20pt;
+        font-size: 10pt;
         cursor:pointer;
       }
       .close:hover {background: #e6e6ff;}
