@@ -95,11 +95,6 @@ if (isset($_POST['submit'])) {
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
  }
-catch(Exception $e) { 
-die(var_dump($e)); 
-} 
-echo "<h3>Ваша заявка оформлена!</h3>"; 
-} 
 $sql_select = "SELECT * FROM registration_tbl"; 
 $stmt = $conn->query($sql_select); 
 $registrants = $stmt->fetchAll();  
@@ -111,17 +106,23 @@ echo "<th>imya</th>";
 echo "<th>otchestvo</th>";
 echo "<th>tel</th>"; 
 echo "<th>pas</th>";
-echo "<th>srok</th>"; 
 echo "<th>sum</th>";
 echo "<th>srok</th>";
 echo "<th>sposobopl</th>";
 echo "<th>nomkar</th>";
 foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['tel']."</td>"; 
-echo "<td>".$registrant['password']."</td>"; 
+echo "<tr><td>".$registrant['familiya']."</td>"; 
+echo "<td>".$registrant['imya']."</td>"; 
+  echo "<td>".$registrant['tel']."</td>"; 
+  echo "<td>".$registrant['pas']."</td>"; 
+  echo "<td>".$registrant['srok']."</td>"; 
+  echo "<td>".$registrant['sum']."</td>"; 
+  echo "<td>".$registrant['sposobopl']."</td>"; 
+  echo "<td>".$registrant['nomkar']."</td>"; 
 } 
 echo "</table>"; 
-} else 
+} 
+else 
 { 
 echo "<h3>Ваша заявка не оформлена</h3>"; 
 } 
