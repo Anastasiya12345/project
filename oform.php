@@ -94,12 +94,15 @@ if (isset($_POST['submit'])) {
  $stmt->bindValue(8, $sposobopl);
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
-
-}
+ }
+catch(Exception $e) { 
+die(var_dump($e)); 
+} 
+echo "<h3>Ваша заявка оформлена!</h3>"; 
+} 
 $sql_select = "SELECT * FROM registration_tbl"; 
 $stmt = $conn->query($sql_select); 
-$registrants = $stmt->fetchAll(); 
-//Условие. Если количество записей больше 0, тогда выводится записи полей. В противном случае выводится ошибка о регестрации. 
+$registrants = $stmt->fetchAll();  
 if(count($registrants) > 0) { 
 echo "<h2>Заявки</h2>"; 
 echo "<table>"; 
