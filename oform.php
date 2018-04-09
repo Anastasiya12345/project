@@ -20,15 +20,6 @@ margin-bottom: 0; padding-bottom: 0; }
  text-align: left; border: none; padding-left: 0; }
     td { padding: 0.25em 2em 0.25em 0em;
 border: 0 none; }
-</style>
-</head>
-<body>
-  <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Название документа</title>
-    <style>
       #zatemnenie {
         background: rgba(102, 102, 102, 0.5);
         width: 100%;
@@ -79,7 +70,7 @@ border: 0 none; }
       </div>
     </div>
      
-    <a href="#zatemnenie">Вызвать всплывающее окно</a>
+    <a href="#zatemnenie">Рассчитать ежегодный платеж</a>
  
   </body>
 </html>
