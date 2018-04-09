@@ -45,6 +45,6 @@ name="ras" value="Рассчитать"></br>
   if( isset( $_POST['ras'] ) ){
     $a = (int) $_POST['srok'];
     $b = (int) $_POST['sum'];
-echo "($a * $b)/100";
+echo "{$a * $b/100}";
 }
 ?>
