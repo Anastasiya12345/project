@@ -57,7 +57,8 @@ if( isset($_POST['ras']) ) {
            
         echo "Сумма ежегодного платежа = $d";
       }
-
+?>
+<?php
 try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
