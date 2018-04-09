@@ -37,26 +37,14 @@ name="pasport" id="pasport"/></br>
 <option value ="100000">100000</option>
 <option value ="500000">500000</option>
 </select></br>
-<input type="submit" 
-name="ras" value="Рассчитать"></br>
-<?php
-if( isset($_POST['ras']) ) {
-      $a = (int) $_POST['srok'];
-    $b = (int) $_POST['sum'];
-        $d = ($a*$b/100);
-           
-        echo "Сумма ежегодного платежа = $d";
-  
-    } 
-?></br>
-</br>
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
 </select></br>
 Номер карты <input type="text" 
-name="nomkar" id="nomkar"/></br>
-<input class="dws-submit" type="submit" name="oform" value="Войти">
+<input type="submit" 
+name="ras" value="Рассчитать"></br>
+</br>
 </form>
 </body>
 </html>
@@ -70,7 +58,7 @@ catch (PDOException $e) {
   die(print_r($e));
 }
 
-if (isset($_POST['oform'])) {
+if (isset($_POST['ras'])) {
 
  $familiya = $_POST['familiya'];
  $imya = $_POST['imya'];
@@ -130,3 +118,12 @@ else
 echo "<h3>Ваша заявка не оформлена</h3>"; 
 } 
 ?>
+<?php
+if( isset($_POST['ras']) ) {
+      $a = (int) $_POST['srok'];
+    $b = (int) $_POST['sum'];
+        $d = ($a*$b/100);
+           
+        echo "Сумма ежегодного платежа = $d";
+  
+    } 
