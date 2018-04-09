@@ -37,16 +37,15 @@ name="pasport" id="pasport"/></br>
 </select></br>
 
 <input type="submit" 
-name="submit" value="Рассчитать"></br>
+name="ras" value="Рассчитать"></br>
 </form>
 </body>
 </html>
 <?php
 /*
-if (isset($_GET['submit'])){
-    $a = (int) $_GET['srok'];
-    $b = (int) $_GET['sum'];
-
+  if( isset( $_POST['ras'] ) ){
+    $a = (int) $_POST['srok'];
+    $b = (int) $_POST['sum'];
 echo "($a * $b)/100";
-
+}
 ?>
