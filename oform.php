@@ -56,8 +56,7 @@ if( isset($_POST['ras']) ) {
 </select></br>
 Номер карты <input type="text" 
 name="nomkar" id="nomkar"/></br>
-<input type="submit" 
-name="oform" value="Оформить"></br>
+<input class="dws-submit" type="submit" name="oform" value="Войти">
 </form>
 </body>
 </html>
@@ -84,7 +83,6 @@ if (isset($_POST['oform'])) {
  $sposobopl = $_POST['sposobopl'];
  $nomkar = $_POST['nomkar'];
  
-
    // Insert data
   $sql_insert = "INSERT INTO registration_tbl (familiya,imya,otchestvo,tel,pas,srok,sum,sposobopl,nomkar)
   VALUES (?,?,?,?,?,?,?,?,?)";
