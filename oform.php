@@ -65,21 +65,17 @@ catch (PDOException $e) {
   print("Error connecting to SQL Server.");
   die(print_r($e));
 }
-
-if (isset($_POST['oform'])) {
-
+if (isset($_POST['ras'])) {
  $familiya = $_POST['familiya'];
  $imya = $_POST['imya'];
  $otchestvo = $_POST['otchestvo'];
- $tel = $_POST['tel'];
- 
+ $tel = $_POST['tel']; 
  $pas = $_POST['pas'];
  $srok = $_POST['srok'];
  $sum = $_POST['sum'];
  $sposobopl = $_POST['sposobopl'];
  $nomkar = $_POST['nomkar'];
- 
-   // Insert data
+    // Insert data
   $sql_insert = "INSERT INTO registration_tbl (familiya,imya,otchestvo,tel,pas,srok,sum,sposobopl,nomkar)
   VALUES (?,?,?,?,?,?,?,?,?)";
  $stmt = $conn->prepare($sql_insert);
