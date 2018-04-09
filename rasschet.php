@@ -47,7 +47,7 @@ if( isset($_POST['ras']) ) {
     $b = (int) $_POST['sum'];
         $d = ($a*$b/100);
                    
-        echo "$d"
+        echo "$d";
     } ?>
 <?php
 /*
