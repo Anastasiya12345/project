@@ -42,7 +42,7 @@ catch (PDOException $e) {
 print("Ошибка подключения к SQL Server."); 
 die(print_r($e)); 
 } 
-$sql_select = "SELECT * FROM klient_tbl";
+$sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
 
   if(isset($_POST["submit"])) {
