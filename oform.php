@@ -111,6 +111,7 @@ echo "<th>nomkar</th>";
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['familiya']."</td>"; 
 echo "<td>".$registrant['imya']."</td>"; 
+  echo "<td>".$registrant['otchestvo']."</td>";
   echo "<td>".$registrant['tel']."</td>"; 
   echo "<td>".$registrant['pas']."</td>"; 
   echo "<td>".$registrant['srok']."</td>"; 
