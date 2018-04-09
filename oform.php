@@ -54,24 +54,20 @@ border: 0 none; }
         margin: 10px;
         text-decoration: none;
         background: #f2f2f2;
-        font-size: 14pt;
+        font-size: 20pt;
         cursor:pointer;
       }
       .close:hover {background: #e6e6ff;}
     </style>
   </head>
  
-  <body>
-   
-    <div id="zatemnenie">
+     <div id="zatemnenie">
       <div id="okno">
         Всплывающее окошко!<br>
-        <a href="#" class="close">Закрыть окно</a>
+        <a href="#" class="close">Закрыть</a>
       </div>
     </div>
-    </body>
-</html>
-<h1>Оформление страхования жизни</h1>
+ <h1>Оформление страхования жизни</h1>
 <a href="#zatemnenie">Вызвать всплывающее окно</a>
  <p><i>Заполните анкету.</i></p>
 <form method="post" action="oform.php">
