@@ -55,10 +55,8 @@ name="submit1" value="Оформить"
 </html>
 
 <?php
-try
-{
-  $conn = new PDO("mysql:host=localhost;dbname=Progr", "root", "");
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try { $conn = new PDO("sqlsrv:server = tcp:karl.database.windows.net,1433; Database = basa", "Anastasiya", "L4x78tm2p1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
   print("Error connecting to SQL Server.");
