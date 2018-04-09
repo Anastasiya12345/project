@@ -44,10 +44,10 @@ name="ras" value="Рассчитать"></br>
 if( isset($_POST['ras']) ) {
       $a = (int) $_POST['srok'];
     $b = (int) $_POST['sum'];
-        $d = ($a*$b/100);
+        $d = ($a*0.1/$b);
                    
         echo "$d";
-    } ?>
+    } ?></br>
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
