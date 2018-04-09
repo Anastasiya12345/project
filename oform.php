@@ -38,6 +38,16 @@ name="pasport" id="pasport"/></br>
 <option value ="100000">100000</option>
 <option value ="500000">500000</option>
 </select></br>
+<input type="submit" 
+name="ras" value="Рассчитать"></br>
+<?php
+if( isset($_POST['ras']) ) {
+      $a = (int) $_POST['srok'];
+    $b = (int) $_POST['sum'];
+        $d = ($a*$b/100);
+                   
+        echo "$d";
+    } ?>
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
@@ -45,7 +55,7 @@ name="pasport" id="pasport"/></br>
 Номер карты <input type="text" 
 name="nomkar" id="nomkar"/></br>
 <input type="submit" 
-name="submit1" value="Оформить"></br>
+name="submit" value="Оформить"></br>
 </form>
 </body>
 </html>
