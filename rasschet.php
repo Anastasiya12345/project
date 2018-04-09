@@ -42,6 +42,7 @@ name="submit" value="Рассчитать"></br>
 </body>
 </html>
 <?php
+/*
 if (isset($_GET['submit'])){
     $a = (int) $_GET['srok'];
     $b = (int) $_GET['sum'];
