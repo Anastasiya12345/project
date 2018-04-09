@@ -23,7 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Оформление заявки</h1> 
-<p>Введите свои данные и нажмите <strong> "Далее" </strong> .</p>
+<p><i>Введите свои данные и нажмите <strong> "Далее" </strong> .</i></p>
 <form method="post" action="oform.php">
 Фамилия <input type="text" 
 name="familiya" id="familiya"/></br> 
