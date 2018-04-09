@@ -45,8 +45,8 @@ name="pasport" id="pasport"/></br>
 Номер карты <input type="text" 
 name="nomkar" id="nomkar"/></br>
 <input type="submit" 
-name="submit1" value="Оформить"
- <a href=https://anastasiya.azurewebsites.net/rasschet.php <b>Рассчитать ежегодный платеж</b></a>
+name="submit1" value="Оформить"</br>
+ <a href=https://anastasiya.azurewebsites.net/rasschet.php><b>Рассчитать ежегодный платеж</b></a>
 </form>
 </body>
 </html>
