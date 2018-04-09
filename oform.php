@@ -23,7 +23,7 @@ border: 0 none; }
              </style>
   </head>
  <h1>Оформление страхования жизни</h1>
-	<a><href=https://anastasiya.azurewebsites.net/rasschet.php><b>Рассчет стоимости ежегодного платежа</b></a>
+	<a><href="https://anastasiya.azurewebsites.net/rasschet.php"><b>Рассчет стоимости ежегодного платежа</b></a>
  <p><i>Заполните анкету.</i></p>
 <form method="post" action="oform.php">
 Серия и номер паспорта <input type="text" 
