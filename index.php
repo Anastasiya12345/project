@@ -24,8 +24,7 @@ border: 0 none; }
 <body> 
 <h1>Оформление заявки</h1> 
 <p>Введите свои данные и нажмите <strong> "Далее" </strong> .</p>
-<form method="post" action="oform.php"> 
-enctype="multipart/form-data" ></br> 
+<form method="post" action="oform.php">
 Фамилия <input type="text" 
 name="familiya" id="familiya"/></br> 
 Имя <input type="text" 
