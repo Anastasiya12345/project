@@ -41,7 +41,7 @@ name="pasport" id="pasport"/></br>
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
 </select></br>
-Номер карты <input type="text" 
+Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
 <input type="submit" 
 name="ras" value="Рассчитать"></br>
 </br>
