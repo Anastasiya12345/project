@@ -57,25 +57,6 @@ $stmt = $conn->query($sql_select);
         }
     }
   }
-
-$sql_select = "SELECT * FROM registration_tbl"; 
-$stmt = $conn->query($sql_select); 
-$registrants = $stmt->fetchAll(); 
-//Условие. Если количество записей больше 0, тогда выводится записи полей. В противном случае выводится ошибка о регестрации. 
-if(count($registrants) > 0) { 
-echo "<h2>Зарегестрированные</h2>"; 
-echo "<table>"; 
-echo "<tr><th>tel</th>"; 
-echo "<th>password</th>"; 
-foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['tel']."</td>"; 
-echo "<td>".$registrant['password']."</td>"; 
-} 
-echo "</table>"; 
-} else 
-{ 
-echo "<h3>Заявка не оформлена</h3>"; 
-} 
 ?> 
 </form> 
 </body> 
