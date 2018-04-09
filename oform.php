@@ -96,5 +96,30 @@ if (isset($_POST['submit'])) {
  $stmt->execute();
 
 }
-
+$sql_select = "SELECT * FROM registration_tbl"; 
+$stmt = $conn->query($sql_select); 
+$registrants = $stmt->fetchAll(); 
+//Условие. Если количество записей больше 0, тогда выводится записи полей. В противном случае выводится ошибка о регестрации. 
+if(count($registrants) > 0) { 
+echo "<h2>Заявки</h2>"; 
+echo "<table>"; 
+echo "<th>familiya</th>"; 
+echo "<th>imya</th>"; 
+echo "<th>otchestvo</th>";
+echo "<th>tel</th>"; 
+echo "<th>pas</th>";
+echo "<th>srok</th>"; 
+echo "<th>sum</th>";
+echo "<th>srok</th>";
+echo "<th>sposobopl</th>";
+echo "<th>nomkar</th>";
+foreach($registrants as $registrant) { 
+echo "<tr><td>".$registrant['tel']."</td>"; 
+echo "<td>".$registrant['password']."</td>"; 
+} 
+echo "</table>"; 
+} else 
+{ 
+echo "<h3>Ваша заявка не оформлена</h3>"; 
+} 
 ?>
