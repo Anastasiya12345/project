@@ -20,55 +20,19 @@ margin-bottom: 0; padding-bottom: 0; }
  text-align: left; border: none; padding-left: 0; }
     td { padding: 0.25em 2em 0.25em 0em;
 border: 0 none; }
-          #zatemnenie {
-        background: rgba(102, 102, 102, 0.5);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-      }
-      #okno {
-        width: 500px;
-        height: 150px;
-        text-align: center;
-        padding: 15px;
-        border: 3px solid #0000cc;
-        border-radius: 10px;
-        color: #0000cc;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        background: #fff;
-      }
-      #zatemnenie:target {display: block;}
-      .close {
-        display: inline-block;
-        border: 1px solid #0000cc;
-        color: #0000cc;
-        padding: 0 12px;
-        margin: 10px;
-        text-decoration: none;
-        background: #f2f2f2;
-        font-size: 10pt;
-        cursor:pointer;
-      }
-      .close:hover {background: #e6e6ff;}
-    </style>
+             </style>
   </head>
- 
-     <div id="zatemnenie">
-      <div id="okno">
-        Всплывающее окошко!<br>
-        <a href="#" class="close">Закрыть</a>
-      </div>
-    </div>
  <h1>Оформление страхования жизни</h1>
-<a href="#zatemnenie">Вызвать всплывающее окно</a>
+<div id="envelope" class="envelope">
+   <a class="close-btn" href="javascript:void(0)" onclick = "document.getElementById('envelope').style.display='none';document.getElementById('fade').style.display='none'">Закрыть</a>
+     <h1 class="title">Отправить нам сообщение</h1>
+      <form method="post" action="mail/sendletter.php">
+	<input type="text" name="sender" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'* Ваше Имя':this.value;" value="* Ваше Имя" class="your-name"/>
+	<input type="text" name="email" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'* Ваш Email':this.value;" value="* Ваш Email" class="email-address"/>
+	<textarea class="your-message">Пожалуйста, введите своё сообщение здесь ..</textarea>
+	<input type="submit" name="send" value="Отправить" class="send-message">
+      </form>
+</div>
  <p><i>Заполните анкету.</i></p>
 <form method="post" action="oform.php">
 Серия и номер паспорта <input type="text" 
