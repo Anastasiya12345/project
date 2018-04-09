@@ -23,7 +23,6 @@ border: 0 none; }
              </style>
   </head>
  <h1>Оформление страхования жизни</h1>
-<a href="https://anastasiya.azurewebsites.net/rasschet.php"><b>Рассчет стоимости ежегодного платежа</b></a>
  <p><i>Заполните анкету.</i></p>
 <form method="post" action="oform.php">
 Серия и номер паспорта <input type="text" 
@@ -87,7 +86,7 @@ if (isset($_POST['oform'])) {
  
 
    // Insert data
-  $sql_insert = "INSERT INTO klient_tbl (familiya,imya,otchestvo,tel,pas,srok,sum,sposobopl,nomkar)
+  $sql_insert = "INSERT INTO registration_tbl (familiya,imya,otchestvo,tel,pas,srok,sum,sposobopl,nomkar)
   VALUES (?,?,?,?,?,?,?,?,?)";
  $stmt = $conn->prepare($sql_insert);
  $stmt->bindValue(1, $familiya);
