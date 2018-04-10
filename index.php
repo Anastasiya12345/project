@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-<Title>Страховка</Title>
+<Title>Страхование</Title>
 <style type="text/css">
     body { background-color:
  #fff; border-top: solid 10px #000;
@@ -24,8 +24,8 @@ border: 0 none; }
 </style>
 </head>
 <body>
-    <h1>Оформление</h1>
-    <p>Введите свои данные и перейдите по кнопке<strong> "Далее" </strong> .</p>
+    <h1>Оформление страхования</h1>
+    <h2><i>Введите свои данные и нажмите <strong> "Далее" </strong> .</i></р2>
 <form method="post" action="oform.php">
   Фамилия  <input type="text" name="familiya" id="familiya"/></br>
   Имя  <input type="text" name="imya" id="name"/></br>
