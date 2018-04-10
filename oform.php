@@ -48,8 +48,10 @@ if( isset($_POST['ras']) ) {
       }
 ?></br>
 </br>
-Серия и номер паспорта <input type="text" 
-name="pas" id="pas"/></br> 
+Серия паспорта <input type="text" 
+name="serpas" id="serpas"/></br> 
+Номер паспорта <input type="text" 
+name="nompas" id="nompas"/></br> 
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
