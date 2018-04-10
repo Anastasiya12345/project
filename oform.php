@@ -55,6 +55,7 @@ name="pas" id="pas"/></br>
 </select></br>
 Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
 <input type="submit" name="oform" value="Оформить" onClick="alert('Ваша заявка оформлена!')"/>
+<a href = https://anastasiya.azurewebsites.net/index.php>На главную</a></dr>
 </form>
 </body>
 </html>
