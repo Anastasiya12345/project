@@ -75,24 +75,26 @@ if (isset($_POST['ras'])) {
  $imya = $_POST['imya'];
  $otchestvo = $_POST['otchestvo'];
  $tel = $_POST['tel']; 
- $pas = $_POST['pas'];
+ $nompas = $_POST['nompas'];
+ $serpas = $_POST['serpas'];
  $srok = $_POST['srok'];
  $sum = $_POST['sum'];
  $sposobopl = $_POST['sposobopl'];
  $nomkar = $_POST['nomkar'];
     // Insert data
-  $sql_insert = "INSERT INTO registration_tbl (familiya, imya, otchestvo, tel, pas, srok, sum, sposobopl, nomkar)
+  $sql_insert = "INSERT INTO registration_tbl (familiya, imya, otchestvo, tel, serpas, nompas, srok, sum, sposobopl, nomkar)
   VALUES (?,?,?,?,?,?,?,?,?)";
  $stmt = $conn->prepare($sql_insert);
  $stmt->bindValue(1, $familiya);
  $stmt->bindValue(2, $imya);
  $stmt->bindValue(3, $otchestvo);
  $stmt->bindValue(4, $tel);
- $stmt->bindValue(5, $pas);
- $stmt->bindValue(6, $srok);
- $stmt->bindValue(7, $sum);
- $stmt->bindValue(8, $sposobopl);
- $stmt->bindValue(9, $nomkar);
+ $stmt->bindValue(5, $serpas);
+ $stmt->bindValue(6, $nompas);
+ $stmt->bindValue(7, $srok);
+ $stmt->bindValue(8, $sum);
+ $stmt->bindValue(9, $sposobopl);
+ $stmt->bindValue(10, $nomkar);
  $stmt->execute();
  }
 ?>
