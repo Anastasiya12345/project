@@ -45,11 +45,12 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-
-$sql_select = "SELECT * FROM registration_tbl";
+  if(isset($_POST["submit"])){
+if($_POST["familiya"] =="" || $_POST["imya"]=="" || $_POST["otchestvo"] ==""){echo "Введите фамилию, имя и отчество";}
+else{
+try {
+  $sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
-
-  if(isset($_POST["submit"])) {
     if ($stmt->fetchColumn() > 0) {
       foreach ($n as $row) {
         session_start();
@@ -60,4 +61,5 @@ $stmt = $conn->query($sql_select);
       }
     }
   }
+}
 ?>
