@@ -25,8 +25,6 @@ border: 0 none; }
  <h1>Оформление страхования жизни</h1>
  <p><i>Заполните анкету.</i></p>
 <form method="post" action="oform.php">
-Серия и номер паспорта <input type="text" 
-name="pas" id="pas"/></br> 
 Срок страховой службы <select name="srok">
 <option value ="1">1 год</option>
 <option value ="5">5 лет</option>
@@ -49,6 +47,8 @@ if( isset($_POST['ras']) ) {
       }
 ?></br>
 </br>
+Серия и номер паспорта <input type="text" 
+name="pas" id="pas"/></br> 
 Способ оплаты <select name="sposobopl">
 <option value ="Wisa">Карта Wisa</option>
 <option value ="MIR">Карта МИР</option>
