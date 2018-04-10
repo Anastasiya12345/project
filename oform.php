@@ -66,10 +66,7 @@ catch (PDOException $e) {
   print("Error connecting to SQL Server.");
   die(print_r($e));
 }
-if(isset($_POST["ras"]))
-{
-if($_POST["nomkar"] =="" || $_POST["pas"]==""){echo "Введите серию, номер паспорта и номер карты";}
-else {
+if (isset($_POST['ras'])) {
  $familiya = $_POST['familiya'];
  $imya = $_POST['imya'];
  $otchestvo = $_POST['otchestvo'];
@@ -95,5 +92,4 @@ else {
  $stmt->execute();
   echo "Ваша заявка оформлена!"
  }
-}
 ?>
