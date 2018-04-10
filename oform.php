@@ -54,7 +54,7 @@ name="pas" id="pas"/></br>
 <option value ="MIR">Карта МИР</option>
 </select></br>
 Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
-<input type="submit" name="oform" value="Оформить"/>
+<input type="submit" name="oform" value="Оформить" onClick="alert('<i>Поздравляем,Ваша заявка оформлена!</i>')"/>
 </form>
 </body>
 </html>
@@ -91,10 +91,4 @@ if (isset($_POST['ras'])) {
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
  }
-$sql_select = "SELECT * FROM registration_tbl"; 
-$stmt = $conn->query($sql_select); 
-$registrants = $stmt->fetchAll(); 
-if(count($registrants) > 0) { 
-echo "<p><i>Поздравляем,Ваша заявка оформлена!</i></p>"; 
-}
 ?>
