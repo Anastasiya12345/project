@@ -22,7 +22,7 @@ margin-bottom: 0; padding-bottom: 0; }
 border: 0 none; }
              </style>
   </head>
- <h1>Оформление страхования жизни</h1>
+ <h1>Оформление страхования</h1>
  <h2><i>Заполните анкету.</i></h2>
 <form method="post" action="oform.php">
 Срок страховой службы <select name="srok">
