@@ -24,7 +24,7 @@ border: 0 none; }
              </style>
   </head>
  <h1>Оформление страхования</h1>
- <p><i>Заполните анкету.</i></p>
+ <p><i>Дозаполните анкету.</i></p>
 <form method="post" action="oform.php">
 Срок страховой службы <select name="srok">
 <option value ="1">1 год</option>
