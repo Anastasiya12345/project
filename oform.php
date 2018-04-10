@@ -54,7 +54,7 @@ name="pas" id="pas"/></br>
 <option value ="MIR">Карта МИР</option>
 </select></br>
 Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
-<input type="submit" name="oform" value="Оформить" onClick="alert('Ваша заявка оформлена!')"/>
+<input type="submit" name="oform" value="Оформить" onClick="alert('Ваша заявка оформлена!')"/></dr>
 <a href = https://anastasiya.azurewebsites.net/index.php>На главную</a></dr>
 </form>
 </body>
