@@ -54,7 +54,7 @@ name="pas" id="pas"/></br>
 <option value ="MIR">Карта МИР</option>
 </select></br>
 Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
-<input type="submit" name="oform" value="Оформить"/>
+<input type="submit" name="oform" value="Оформить" onClick="alert('Ваша заявка оформлена!')"/>
 </form>
 </body>
 </html>
@@ -90,6 +90,5 @@ if (isset($_POST['ras'])) {
  $stmt->bindValue(8, $sposobopl);
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
-  echo "Ваша заявка оформлена!"
  }
 ?>
