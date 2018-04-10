@@ -25,7 +25,7 @@ border: 0 none; }
 </head>
 <body>
     <h1>Оформление страхования</h1>
-    <h2><i>Введите свои данные и нажмите <strong> "Далее" </strong> .</i></h2>
+    <p><i>Введите свои данные и нажмите <strong> "Далее" </strong> .</i></p>
 <form method="post" action="oform.php">
   Фамилия  <input type="text" name="familiya" id="familiya"/></br>
   Имя  <input type="text" name="imya" id="name"/></br>
