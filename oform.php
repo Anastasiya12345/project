@@ -91,4 +91,9 @@ if (isset($_POST['ras'])) {
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
  }
+$sql_select = "SELECT * FROM registration_tbl"; 
+$stmt = $conn->query($sql_select); 
+$registrants = $stmt->fetchAll(); 
+if(count($registrants) > 0) { 
+echo "<p><i>Поздравляем,Ваша заявка оформлена!</i></p>"; 
 ?>
