@@ -96,4 +96,5 @@ $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) { 
 echo "<p><i>Поздравляем,Ваша заявка оформлена!</i></p>"; 
+}
 ?>
