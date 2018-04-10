@@ -22,8 +22,8 @@ margin-bottom: 0; padding-bottom: 0; }
 border: 0 none; }
              </style>
   </head>
- <h1>Оформление страхования жизни</h1>
- <p><i>Заполните анкету.</i></p>
+ <h2>Оформление страхования жизни</h2>
+ <h1><i>Заполните анкету.</i></h1>
 <form method="post" action="oform.php">
 Срок страховой службы <select name="srok">
 <option value ="1">1 год</option>
@@ -54,7 +54,7 @@ name="pas" id="pas"/></br>
 <option value ="MIR">Карта МИР</option>
 </select></br>
 Номер карты <input type="text" name="nomkar" id="nomkar"/></br>
-<input type="submit" name="oform" value="Оформить" onClick="alert('<i>Поздравляем,Ваша заявка оформлена!</i>')"/>
+<input type="submit" name="oform" value="Оформить" onClick="alert('Поздравляем,Ваша заявка оформлена!')"/>
 </form>
 </body>
 </html>
@@ -66,7 +66,10 @@ catch (PDOException $e) {
   print("Error connecting to SQL Server.");
   die(print_r($e));
 }
-if (isset($_POST['ras'])) {
+if(isset($_POST["ras"]))
+{
+if($_POST["nomkar"] =="" || $_POST["pas"]==""){echo "Введите серию, номер паспорта и номер карты";}
+else {
  $familiya = $_POST['familiya'];
  $imya = $_POST['imya'];
  $otchestvo = $_POST['otchestvo'];
@@ -90,5 +93,7 @@ if (isset($_POST['ras'])) {
  $stmt->bindValue(8, $sposobopl);
  $stmt->bindValue(9, $nomkar);
  $stmt->execute();
+  echo "Ваша заявка оформлена!"
  }
+}
 ?>
